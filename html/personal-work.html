@@ -10,6 +10,13 @@
   <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
   <script>WebFont.load({ google: { families: ["Open Sans:400,700", "Bitter:400,700"] } });</script>
   <style>
+    /* ─── Focus visibility (a11y) ───────────────────── */
+    a:focus-visible, button:focus-visible, .nav-hamburger:focus-visible {
+      outline: 2px solid #0e0c0c;
+      outline-offset: 2px;
+      border-radius: 2px;
+    }
+
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     a { text-decoration: none; }
 
@@ -59,7 +66,7 @@
       color: #0e0c0c;
       transition: color 0.2s ease;
     }
-    .nav-link:hover { color: #0cc4c6; }
+    .nav-link:hover { color: #087274; }
     .nav-hamburger {
       display: none;
       flex-direction: column;
@@ -160,7 +167,7 @@
 
     .card-icon {
       font-size: 64px;
-      color: #0cc4c6;
+      color: #087274;
       margin-bottom: 24px;
       display: block;
       height: 64px;
@@ -179,7 +186,7 @@
       font-weight: 700;
       letter-spacing: 1.5px;
       text-transform: uppercase;
-      color: #0cc4c6;
+      color: #087274;
       margin-bottom: 12px;
     }
 
@@ -205,7 +212,7 @@
       margin-top: 24px;
       padding: 16px 24px;
       background: #f5f5f5;
-      color: #0cc4c6;
+      color: #087274;
       font-family: 'Open Sans', sans-serif;
       font-size: 13px;
       font-weight: 700;
@@ -240,7 +247,7 @@
       display: inline;
       font-size: 10px;
       font-weight: 400;
-      color: #0cc4c6;
+      color: #087274;
       letter-spacing: 0.5px;
     }
 
@@ -323,12 +330,12 @@
   <div class="page">
 
     <div class="case-hero">
-      <div class="case-hero__title">Personal Work</div>
+      <h1 class="case-hero__title">Personal Work</h1>
       <div class="case-hero__company">Educational Projects, Apps &amp; Tools I Build Outside of Client Work</div>
     </div>
 
     <div class="section-full">
-      <div class="section-label">Educational Initiatives</div>
+      <h2 class="section-label">Educational Initiatives</h2>
       <div class="section-sublabel">Project Plans & Interactive Tools</div>
       <p class="section-body">I've designed and developed comprehensive educational programs and interactive tools to help tweens develop executive function skills through hands-on, creative problem-solving. Each 5-day project plan includes 1–1.5 hours of instruction per day, combining technical learning with practical application.</p>
 
@@ -386,7 +393,7 @@
     </div>
 
     <div class="section-full">
-      <div class="section-label">Software Projects</div>
+      <h2 class="section-label">Software Projects</h2>
       <div class="section-sublabel">Built with Claude Code</div>
       <p class="section-body">Outside of client work, I use Claude Code as a coding partner to build and ship real, working software — from a vehicle-inspection PWA to a paranormal-investigation game. These are less a commit log and more a running note on what each one is for.</p>
 

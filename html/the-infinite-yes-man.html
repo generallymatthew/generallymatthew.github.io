@@ -9,6 +9,13 @@
   <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
   <script>WebFont.load({ google: { families: ["Great Vibes:400", "Open Sans:300,400,700", "Bitter:400,700"] } });</script>
   <style>
+    /* ─── Focus visibility (a11y) ───────────────────── */
+    a:focus-visible, button:focus-visible, .nav-hamburger:focus-visible {
+      outline: 2px solid #0e0c0c;
+      outline-offset: 2px;
+      border-radius: 2px;
+    }
+
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     a { text-decoration: none; }
 
@@ -121,7 +128,7 @@
       font-weight: 700;
       letter-spacing: 3px;
       text-transform: uppercase;
-      color: #0cc4c6;
+      color: #087274;
       margin-top: 24px;
     }
 
@@ -147,7 +154,7 @@
       content: '—';
       position: absolute;
       left: 0;
-      color: #0cc4c6;
+      color: #087274;
       font-weight: 700;
     }
 
@@ -189,7 +196,7 @@
       font-weight: 700;
       letter-spacing: 3px;
       text-transform: uppercase;
-      color: #0cc4c6;
+      color: #087274;
     }
 
     /* ─── Global Nav ─────────────────────────────────────── */
@@ -225,7 +232,7 @@
       color: #0e0c0c;
       transition: color 0.2s ease;
     }
-    .nav-link:hover { color: #0cc4c6; }
+    .nav-link:hover { color: #087274; }
     .nav-link--accent { color: #fe204a; }
     .nav-link--accent:hover { color: #b5012f; }
 
@@ -320,7 +327,7 @@
     <!-- Hero -->
     <div class="case-hero">
       <div class="case-hero__eyebrow">Essay</div>
-      <div class="case-hero__title">The Danger of the Infinite "Yes-Man"</div>
+      <h1 class="case-hero__title">The Danger of the Infinite "Yes-Man"</h1>
     </div>
 
     <!-- Intro -->
@@ -340,7 +347,7 @@
 
     <!-- The trade-off -->
     <div class="section-full">
-      <div class="section-label">The Trade-off: Better Outcomes, Less "Fun"</div>
+      <h2 class="section-label">The Trade-off: Better Outcomes, Less "Fun"</h2>
       <p class="section-body">If you intentionally temper your AI's agreeability (instructing it to critique your logic, point out blind spots, and challenge your assumptions), a fascinating psychological shift happens: the tool becomes significantly less enjoyable to use.</p>
       <p class="section-body">It turns a breezy, effortless interaction into an intellectual workout. It forces you to defend your positions, re-evaluate your data, and sit with the discomfort of being wrong.</p>
       <p class="section-body">But that drop in immediate user enjoyment is exactly where the value lies.</p>
@@ -354,7 +361,7 @@
 
     <!-- Designing for outcomes -->
     <div class="section-full">
-      <div class="section-label">Designing for Outcomes Over Comfort</div>
+      <h2 class="section-label">Designing for Outcomes Over Comfort</h2>
       <p class="section-body">In product design, we often aim for "delight." But when it comes to partnering with agentic AI, true delight shouldn't come from a frictionless conversation; it should come from a superior outcome.</p>
       <p class="section-body">By introducing intentional, constructive friction into your AI interactions, you trade short-term validation for long-term clarity. It might not feel like a warm hug, but it's how you get to the truth.</p>
     </div>

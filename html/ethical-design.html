@@ -9,6 +9,13 @@
   <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
   <script>WebFont.load({ google: { families: ["Great Vibes:400", "Open Sans:300,400,700", "Bitter:400,700"] } });</script>
   <style>
+    /* ─── Focus visibility (a11y) ───────────────────── */
+    a:focus-visible, button:focus-visible, .nav-hamburger:focus-visible {
+      outline: 2px solid #0e0c0c;
+      outline-offset: 2px;
+      border-radius: 2px;
+    }
+
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     a { text-decoration: none; }
 
@@ -154,7 +161,7 @@
       content: '—';
       position: absolute;
       left: 0;
-      color: #0cc4c6;
+      color: #087274;
       font-weight: 700;
     }
 
@@ -196,7 +203,7 @@
       font-weight: 700;
       letter-spacing: 3px;
       text-transform: uppercase;
-      color: #0cc4c6;
+      color: #087274;
     }
 
     /* ─── Global Nav ─────────────────────────────────────── */
@@ -232,7 +239,7 @@
       color: #0e0c0c;
       transition: color 0.2s ease;
     }
-    .nav-link:hover { color: #0cc4c6; }
+    .nav-link:hover { color: #087274; }
     .nav-link--accent { color: #fe204a; }
     .nav-link--accent:hover { color: #b5012f; }
 
@@ -328,12 +335,12 @@
     <!-- Hero -->
     <div class="case-hero">
       <div class="case-hero__eyebrow">Essay</div>
-      <div class="case-hero__title">Can We Design Ethical User Experiences?</div>
+      <h1 class="case-hero__title">Can We Design Ethical User Experiences?</h1>
     </div>
 
     <!-- Intro -->
     <div class="section-full">
-      <div class="section-label">Ethical Design in Contemporary UX Practice</div>
+      <h2 class="section-label">Ethical Design in Contemporary UX Practice</h2>
       <p class="section-body">Ethical design has emerged as a critical imperative in the technology sector, marking a significant shift over the last decade toward evaluating the broader societal impacts of digital products. As an industry, there is an increasing scrutiny placed on how user rights, privacy, and data security are safeguarded. This stands in contrast to historic tech models that often prioritized shareholder satisfaction and rapid engagement mechanics over user well-being.</p>
       <p class="section-body">Within this landscape, User Experience (UX) designers occupy a uniquely influential position. While designers rarely hold direct power to dictate overarching business models, they possess immense implicit power as the primary architects of the digital instruments that drive those models. This specific vantage point allows UX professionals to act as vital advocates for the end-user and directly shape product strategies across broader product teams.</p>
       <p class="section-body">To systematically address the complexities of ethical lapses, framework systems are essential for evaluating digital interfaces. A practical approach organizes these core ethical responsibilities into four distinct dimensions, easily remembered by the acronym ACTS: Alignment, Consent, Transparency, and Safety.</p>
@@ -341,7 +348,7 @@
 
     <!-- ACTS Framework -->
     <div class="section-full section-full--gray">
-      <div class="section-label">The ACTS Framework</div>
+      <h2 class="section-label">The ACTS Framework</h2>
       <div class="acts-grid">
         <div class="acts-card">
           <div class="acts-card__letter">A</div>
@@ -364,7 +371,7 @@
 
     <!-- Four Pillars -->
     <div class="section-full">
-      <div class="section-label">The Four Pillars</div>
+      <h2 class="section-label">The Four Pillars</h2>
 
       <div class="section-sublabel">1. Transparency</div>
       <p class="section-body">Transparency mandates that users remain fully informed about a system's backend behaviors and the immediate or long-term consequences of their digital interactions. When a platform intentionally obfuscates the outcomes of user actions through deceptive interface choices (commonly known as dark design patterns) or masks realities behind deliberately complex phrasing, it crosses into unethical behavior. Such practices carry severe reputational risks, often leading to substantial public backlash once these dark patterns are inevitably exposed.</p>
@@ -381,7 +388,7 @@
 
     <!-- Strategic Buy-In -->
     <div class="section-full section-full--gray">
-      <div class="section-label">Strategic Buy-In and Practical Implementation</div>
+      <h2 class="section-label">Strategic Buy-In and Practical Implementation</h2>
       <p class="section-body">Identifying these ethical dimensions is only half the battle; the true challenge lies in securing stakeholder buy-in within highly competitive corporate environments. To advocate effectively for ethical changes, UX designers must approach the issue strategically rather than purely philosophically.</p>
       <ul class="content-list">
         <li>Collaborate directly with corporate legal counsel early in the process. Securing legal evaluation on borderline interface patterns provides concrete organizational boundaries that protect the firm from future liability.</li>

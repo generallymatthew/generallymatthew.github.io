@@ -10,6 +10,13 @@
   <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
   <script>WebFont.load({ google: { families: ["Great Vibes:400", "Open Sans:400,700", "Bitter:400,700"] } });</script>
   <style>
+    /* ─── Focus visibility (a11y) ───────────────────── */
+    a:focus-visible, button:focus-visible, .nav-hamburger:focus-visible {
+      outline: 2px solid #0e0c0c;
+      outline-offset: 2px;
+      border-radius: 2px;
+    }
+
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     a { text-decoration: none; }
 
@@ -66,7 +73,7 @@
       transition: color 0.2s ease;
     }
 
-    .nav-link:hover { color: #0cc4c6; }
+    .nav-link:hover { color: #087274; }
     .nav-link--accent { color: #fe204a; }
     .nav-link--accent:hover { color: #b5012f; }
 
@@ -153,7 +160,7 @@
       margin-bottom: 32px;
     }
 
-    .about-hero__meta a { color: #0cc4c6; }
+    .about-hero__meta a { color: #087274; }
 
     .about-hero__links {
       display: flex;
@@ -177,7 +184,7 @@
       font-size: 13px;
       letter-spacing: 2px;
       text-transform: uppercase;
-      color: #0cc4c6;
+      color: #087274;
       margin-bottom: 28px;
     }
 
@@ -294,7 +301,7 @@
 
     .about-link-card__arrow {
       font-size: 20px;
-      color: #0cc4c6;
+      color: #087274;
     }
 
     /* ─── Contact ─────────────────────────────────── */
@@ -322,7 +329,7 @@
     }
 
     .about-contact__item a {
-      color: #0cc4c6;
+      color: #087274;
       text-decoration: none;
     }
 
@@ -355,8 +362,8 @@
 
     <!-- Hero -->
     <div class="about-hero">
-      <div class="about-hero__heading">About Me</div>
-      <div style="font-family:'Open Sans',sans-serif;font-weight:700;font-size:15px;color:#0cc4c6;letter-spacing:1px;margin-bottom:16px;">Matthew Barton</div>
+      <h1 class="about-hero__heading">About Me</h1>
+      <div style="font-family:'Open Sans',sans-serif;font-weight:700;font-size:15px;color: #087274;letter-spacing:1px;margin-bottom:16px;">Matthew Barton</div>
       <div class="about-hero__title">UX Designer + Strategist</div>
       <div class="about-hero__meta">Durham, NC &nbsp;·&nbsp; <a href="mailto:matthew.barton@gmail.com">matthew.barton@gmail.com</a> &nbsp;·&nbsp; <a href="tel:+19199067085">919.906.7085</a></div>
       <div class="about-hero__links">

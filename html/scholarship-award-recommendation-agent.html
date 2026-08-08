@@ -9,6 +9,13 @@
   <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
   <script>WebFont.load({ google: { families: ["Great Vibes:400", "Open Sans:300,400,700", "Bitter:400,700"] } });</script>
   <style>
+    /* ─── Focus visibility (a11y) ───────────────────── */
+    a:focus-visible, button:focus-visible, .nav-hamburger:focus-visible {
+      outline: 2px solid #0e0c0c;
+      outline-offset: 2px;
+      border-radius: 2px;
+    }
+
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     a { text-decoration: none; }
 
@@ -44,7 +51,7 @@
       font-weight: 700;
       letter-spacing: 3px;
       text-transform: uppercase;
-      color: #0cc4c6;
+      color: #087274;
       margin-bottom: 12px;
     }
 
@@ -165,7 +172,7 @@
       content: '—';
       position: absolute;
       left: 0;
-      color: #0cc4c6;
+      color: #087274;
       font-weight: 700;
     }
 
@@ -470,7 +477,7 @@
       font-weight: 700;
       letter-spacing: 3px;
       text-transform: uppercase;
-      color: #0cc4c6;
+      color: #087274;
     }
 
     /* ─── Global Nav ─────────────────────────────────────── */
@@ -506,7 +513,7 @@
       color: #0e0c0c;
       transition: color 0.2s ease;
     }
-    .nav-link:hover { color: #0cc4c6; }
+    .nav-link:hover { color: #087274; }
     .nav-link--accent { color: #fe204a; }
     .nav-link--accent:hover { color: #b5012f; }
 
@@ -602,7 +609,7 @@
     <!-- Hero -->
     <div class="case-hero">
       <div class="case-hero__eyebrow">Auto Awarding</div>
-      <div class="case-hero__title">Scholarship Award Recommendation Agent</div>
+      <h1 class="case-hero__title">Scholarship Award Recommendation Agent</h1>
       <div class="case-hero__company">Blackbaud Award Management</div>
     </div>
 
@@ -655,7 +662,7 @@
         </svg>
       </div>
       <div class="origins-text">
-        <div class="section-label">Project Origins</div>
+        <h2 class="section-label">Project Origins</h2>
         <p class="section-body">In 2024 the customer retention team brought to the product team's attention that we were 27% over the projected churn rate, and that there had been a pattern of feedback from leaving customers that specifically the awarding stage of the award management workflow was a significant part of why they were leaving. It was categorized into two sections.</p>
         <ul class="content-list">
           <li>The functionality and design of the app was poor. The app did not update in a timely manner and information required to make the awarding decisions was fragmented.</li>
@@ -668,7 +675,7 @@
       <video src="../videos/Awarding-ui.mov" style="max-width:100%;max-height:520px;border-radius:6px;box-shadow:0 2px 12px rgba(0,0,0,0.12);" controls playsinline></video>
     </div>
     <div class="section-half">
-      <div class="section-label">Feature Set</div>
+      <h2 class="section-label">Feature Set</h2>
       <ul class="content-list">
         <li><strong>Difficulty-ranked scholarship queue:</strong> surfaces the hardest-to-place scholarships first, so admins tackle what's most at risk of going unawarded.</li>
         <li><strong>Funding-and-need-ranked applicant queue:</strong> surfaces students with the most funding on the table and fewest applications in, so the highest-stakes students get seen first.</li>
@@ -683,7 +690,7 @@
 
     <!-- Discovery -->
     <div class="section-full--alt">
-      <div class="section-label">Discovery</div>
+      <h2 class="section-label">Discovery</h2>
       <p class="section-body">Given a mandate to figure out what was happening and why, I set up meetings with the premium support team, customers, and the dev team. Here is what I learned:</p>
       <ul class="content-list">
         <li>The app updated slowly because of a data architecture issue that was hard and expensive to fix.</li>
@@ -693,13 +700,13 @@
 
     <!-- Problem Framing -->
     <div class="section-full">
-      <div class="section-label">Problem Framing</div>
+      <h2 class="section-label">Problem Framing</h2>
       <p class="section-body">Our awarding workflow was so fragmented it required opening 3+ tabs simultaneously, making it look outdated during sales pitches. This friction drove customer churn and lost sales to competitors. A traditional UI overhaul to fix this would require a minimum of 6 months of dev time.</p>
     </div>
 
     <!-- Hypotheses -->
     <div class="section-full--alt">
-      <div class="section-label">Hypotheses</div>
+      <h2 class="section-label">Hypotheses</h2>
       <div class="section-sublabel">Strategic</div>
       <p class="section-body">Admins don't want a prettier UI; they want the heavy lifting of data gathering automated while remaining the final decision-makers.</p>
       <div class="section-sublabel">Tactical</div>
@@ -710,7 +717,7 @@
 
     <!-- Creative Solution -->
     <div class="section-full">
-      <div class="section-label">Creative Solution</div>
+      <h2 class="section-label">Creative Solution</h2>
       <p class="section-body">Working with support, we diagrammed all the logic used to make an awarding decision so that there was no AI black-box scenario where the AI chooses a recipient but no one is exactly sure how that choice was made.</p>
       <p class="section-body">To ensure the AI does not hallucinate, we built parallel code whose sole job was to run the application data (directly from the database, unmediated by AI) through the scholarship award equation, then compare that result to the AI's result. If they match, great. If not, the AI reruns its process until they do.</p>
       <p class="section-body">If you're asking yourself why we're even using AI if this can be done programmatically with code alone: I would point you to significant evidence that announcing a new feature built using AI can positively affect stock prices of public companies.</p>
@@ -746,7 +753,7 @@
 
     <!-- Metrics -->
     <div class="section-full--alt">
-      <div class="section-label">Metrics of Success</div>
+      <h2 class="section-label">Metrics of Success</h2>
       <div class="metrics-grid">
         <div class="metric-card">
           <div class="metric-card__value">90%</div>
@@ -769,7 +776,7 @@
 
     <!-- User Behavior Change -->
     <div class="section-full">
-      <div class="section-label">User Behavior Change</div>
+      <h2 class="section-label">User Behavior Change</h2>
       <div class="section-sublabel">Before</div>
       <p class="section-body">Opening 3+ tabs to manually aggregate, cross-reference, and analyze student data.</p>
       <div class="section-sublabel">After</div>
@@ -780,7 +787,7 @@
 
     <!-- Business Outcomes -->
     <div class="section-full--alt">
-      <div class="section-label">Business Outcomes</div>
+      <h2 class="section-label">Business Outcomes</h2>
       <ul class="content-list">
         <li>Enabled admins to instantly verify data and justify their awarding choices, making the product defensible in sales conversations.</li>
         <li>Saved 6+ months of dev time by avoiding a full UI overhaul.</li>

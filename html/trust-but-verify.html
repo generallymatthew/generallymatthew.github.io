@@ -9,6 +9,13 @@
   <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
   <script>WebFont.load({ google: { families: ["Great Vibes:400", "Open Sans:300,400,700", "Bitter:400,700"] } });</script>
   <style>
+    /* ─── Focus visibility (a11y) ───────────────────── */
+    a:focus-visible, button:focus-visible, .nav-hamburger:focus-visible {
+      outline: 2px solid #0e0c0c;
+      outline-offset: 2px;
+      border-radius: 2px;
+    }
+
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     a { text-decoration: none; }
 
@@ -153,7 +160,7 @@
       content: '—';
       position: absolute;
       left: 0;
-      color: #0cc4c6;
+      color: #087274;
       font-weight: 700;
     }
 
@@ -199,7 +206,7 @@
       font-weight: 700;
       letter-spacing: 3px;
       text-transform: uppercase;
-      color: #0cc4c6;
+      color: #087274;
     }
 
     /* ─── Global Nav ─────────────────────────────────────── */
@@ -235,7 +242,7 @@
       color: #0e0c0c;
       transition: color 0.2s ease;
     }
-    .nav-link:hover { color: #0cc4c6; }
+    .nav-link:hover { color: #087274; }
     .nav-link--accent { color: #fe204a; }
     .nav-link--accent:hover { color: #b5012f; }
 
@@ -331,12 +338,12 @@
     <!-- Hero -->
     <div class="case-hero">
       <div class="case-hero__eyebrow">Essay</div>
-      <div class="case-hero__title">Trust but Verify</div>
+      <h1 class="case-hero__title">Trust but Verify</h1>
     </div>
 
     <!-- Intro -->
     <div class="section-full">
-      <div class="section-label">How we should negotiate our relationship to agentic AI recommendations and actions</div>
+      <h2 class="section-label">How we should negotiate our relationship to agentic AI recommendations and actions</h2>
       <p class="section-body">We are living through a fundamental shift in how humanity interacts with information. For decades, the internet operated as a vast, interconnected library. Today, it has transformed into a generative engine. In this new landscape, Large Language Models (LLMs) operate as "calculators for the world's knowledge." They possess an unprecedented ability to answer any question in any format. Yet, this incredible capability introduces a massive point of friction: while a traditional calculator guarantees mathematical accuracy, an LLM only guarantees plausibility.</p>
       <p class="section-body">As user experience professionals, we must face an uncomfortable reality. When we design generative systems that stream flawed text with unearned confidence, we aren't just designing an interface; we are actively breaking user trust. Historically, media literacy was taught as a consumer-side responsibility, crystallized in frameworks like Mike Caulfield's SIFT method: Stop, Investigate the source, Find better coverage, and Trace back to the original context. But in an ecosystem where synthetic text, deepfakes, and algorithmic confirmation bias act as constant cognitive friction, we can no longer expect users to shoulder this burden alone.</p>
       <p class="section-body">Our users expect us to be experts in the technology we build. Therefore, we owe it to them to embed media literacy best practices directly into the user interface. Product design must move past the "black box" era. We must establish a new UX paradigm anchored by three core pillars.</p>
@@ -344,7 +351,7 @@
 
     <!-- Three pillars summary -->
     <div class="section-full section-full--gray">
-      <div class="section-label">Three Core Pillars</div>
+      <h2 class="section-label">Three Core Pillars</h2>
       <div class="pillars-grid">
         <div class="pillar-card">
           <div class="pillar-card__value">01</div>
@@ -363,7 +370,7 @@
 
     <!-- Pillar 1 -->
     <div class="section-full">
-      <div class="section-label">1. Show Sources</div>
+      <h2 class="section-label">1. Show Sources</h2>
       <div class="section-sublabel">Transparency by Design</div>
       <p class="section-body">The foundational flaw of most modern AI experiences is the lack of lineage. An LLM states a claim, and the user is expected to accept it wholesale. Good media literacy design borrows a page from the open-web playbook, specifically Wikipedia, by championing structural patterns like edit histories, explicit reference links, superscript citations, and inline attributions.</p>
       <p class="section-body">To build Transparency by Design at the interface and system level, our design systems must treat provenance as a first-class citizen:</p>
@@ -376,7 +383,7 @@
 
     <!-- Pillar 2 -->
     <div class="section-full section-full--gray">
-      <div class="section-label">2. Show Uncertainty</div>
+      <h2 class="section-label">2. Show Uncertainty</h2>
       <div class="section-sublabel">Designing the "Confident Voice" Warning</div>
       <p class="section-body">AI models are engineered to sound authoritative, but the real world is built on nuance. Left unchecked, a model will deliver a wild hallucination and a foundational truth with the exact same linguistic confidence. This is a massive UX failure mode. If a system cannot guarantee a fact, the UI must aggressively counter the model's "confident voice."</p>
       <p class="section-body">We can make uncertainty highly visible through distinct interface interventions:</p>
@@ -389,7 +396,7 @@
 
     <!-- Pillar 3 -->
     <div class="section-full">
-      <div class="section-label">3. Show Humans</div>
+      <h2 class="section-label">3. Show Humans</h2>
       <div class="section-sublabel">Preserving Agency and Accountability</div>
       <p class="section-body">AI is an amplifier, not a surrogate. Just as a wrench requires a human hand to guide it, an AI tool requires human oversight to be safe and effective. When systems become too automated, human users slip into automation bias: a state of passive compliance where they stop critically evaluating the system's outputs. Our job as product designers is to design friction back into the system to protect human agency.</p>
       <p class="section-body">Preserving the human element requires systemic guardrails across the user journey:</p>
@@ -402,7 +409,7 @@
 
     <!-- UX Mandate -->
     <div class="section-full section-full--gray">
-      <div class="section-label">The UX Mandate</div>
+      <h2 class="section-label">The UX Mandate</h2>
       <p class="section-body">Ultimately, media literacy in the digital age cannot just be an educational campaign; it must be an architectural principle. When we build interfaces for generative AI, we hold a massive amount of power over what users perceive as true, credible, and actionable.</p>
       <p class="section-body">By exposing sources, making algorithmic uncertainty visible, and designing clear checkpoints for human accountability, we can move away from manipulative, opaque design patterns. It is our responsibility as UX practitioners to build products that don't just deliver fast answers, but actively empower our users to navigate the world with a critical, media-literate eye.</p>
     </div>

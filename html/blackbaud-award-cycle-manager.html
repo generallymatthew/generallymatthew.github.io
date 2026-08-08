@@ -9,6 +9,13 @@
   <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
   <script>WebFont.load({ google: { families: ["Great Vibes:400", "Open Sans:300,400,700", "Bitter:400,700"] } });</script>
   <style>
+    /* ─── Focus visibility (a11y) ───────────────────── */
+    a:focus-visible, button:focus-visible, .nav-hamburger:focus-visible {
+      outline: 2px solid #0e0c0c;
+      outline-offset: 2px;
+      border-radius: 2px;
+    }
+
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     a { text-decoration: none; }
 
@@ -203,7 +210,7 @@
       content: '—';
       position: absolute;
       left: 0;
-      color: #0cc4c6;
+      color: #087274;
       font-weight: 700;
     }
 
@@ -244,7 +251,7 @@
       font-weight: 700;
       letter-spacing: 3px;
       text-transform: uppercase;
-      color: #0cc4c6;
+      color: #087274;
     }
 
     /* ─── Global Nav ─────────────────────────────────────── */
@@ -280,7 +287,7 @@
       color: #0e0c0c;
       transition: color 0.2s ease;
     }
-    .nav-link:hover { color: #0cc4c6; }
+    .nav-link:hover { color: #087274; }
     .nav-link--accent { color: #fe204a; }
     .nav-link--accent:hover { color: #b5012f; }
 
@@ -384,13 +391,13 @@
 
 
     <div class="case-hero">
-      <div class="case-hero__title">Blackbaud Award Cycle Manager</div>
+      <h1 class="case-hero__title">Blackbaud Award Cycle Manager</h1>
       <div class="case-hero__company">Blackbaud Award Management</div>
     </div>
 
     <!-- Project Origins -->
     <div class="section-half">
-      <div class="section-label">Project Origins</div>
+      <h2 class="section-label">Project Origins</h2>
       <div class="section-sublabel">Background</div>
       <p class="section-body">In 2022, Award Management faced a recurring churn problem. My lead tasked me with building a solution to offload the heavy training burden from admins. The catch? I couldn't touch existing pages or request database work from our overextended back-end team.</p>
       <div class="section-sublabel">Discovery</div>
@@ -433,7 +440,7 @@
 
     <!-- Problem + Hypothesis -->
     <div class="section-half" style="justify-content:flex-start;min-height:auto;padding:48px 64px;">
-      <div class="section-label">Problem Statement</div>
+      <h2 class="section-label">Problem Statement</h2>
       <div class="section-sublabel">Challenge</div>
       <p class="section-body">Our experience was cluttered and confusing. Usability tests showed a dashboard packed with 35 links (20 of which saw less than 0.1% of total clicks) while critical workflows remained buried three levels deep.</p>
     </div>
@@ -446,7 +453,7 @@
 
     <!-- Admin priorities -->
     <div class="section-full">
-      <div class="section-label">Hypothesis</div>
+      <h2 class="section-label">Hypothesis</h2>
       <div class="section-sublabel">Solutions</div>
       <p class="section-body">If 80% of colleges follow the same steps, we could replace the cluttered layout with the Award Cycle Manager: a sequential 6-stage workflow providing automated guidance and progress tracking.</p>
       <p class="section-body">After talking with users and premium support, we determined a list of things that were important to our scholarship admins:</p>
@@ -461,7 +468,7 @@
 
     <!-- Wireframe image rows -->
     <div class="section-full" style="padding-bottom:0;">
-      <div class="section-label">User Feedback</div>
+      <h2 class="section-label">User Feedback</h2>
       <div class="section-sublabel">Wireframes to be user tested</div>
     </div>
 
@@ -469,7 +476,7 @@
       <img src="../images/award-cycle-wf-1.png" alt="Award Cycle Manager: cycle stages view">
     </div>
     <div class="section-half" style="justify-content:flex-start;">
-      <div class="section-label">Split View Design</div>
+      <h2 class="section-label">Split View Design</h2>
       <div class="section-sublabel">Design Strategy</div>
       <p class="section-body">Using the split view design system component to give users a vertical set of steps, showing what's left in the award cycle tasks assigned to them.</p>
       <div class="section-sublabel">User Feedback</div>
@@ -480,7 +487,7 @@
       <img src="../images/award-cycle-wf-2.png" alt="Award Cycle Manager: dashboard view">
     </div>
     <div class="section-half" style="justify-content:flex-start;">
-      <div class="section-label">Vertical Accordion Layout</div>
+      <h2 class="section-label">Vertical Accordion Layout</h2>
       <div class="section-sublabel">Design Strategy</div>
       <p class="section-body">Break out each stage into a container that shows all the steps within that stage once it has been expanded.</p>
       <div class="section-sublabel">User Feedback</div>
@@ -491,7 +498,7 @@
       <img src="../images/award-cycle-wf-3.png" alt="Award Cycle Manager: workflow timeline view">
     </div>
     <div class="section-half" style="justify-content:flex-start;">
-      <div class="section-label">Pizza Tracking</div>
+      <h2 class="section-label">Pizza Tracking</h2>
       <div class="section-sublabel">Design Strategy</div>
       <p class="section-body">Give the user the ability to quickly view all the tasks within a cycle, and make the UI look more modern.</p>
       <div class="section-sublabel">User Feedback</div>
@@ -506,7 +513,7 @@
 
     <!-- EAP design hero image -->
     <div class="section-full">
-      <div class="section-label">Early Access Program</div>
+      <h2 class="section-label">Early Access Program</h2>
       <div class="section-sublabel">Validating our solution</div>
       <p class="section-body" style="margin-bottom:16px;">We determined that the feedback we got from users when we showed them the designs was good for solving UI issues, but it was still hard to tell if this solution would resonate with them. So we set up an EAP for 3 months during an awarding cycle. If scholarship admins used it consistently and clicked on links to get where they needed to go, then that was a good sign.</p>
       <p class="section-body" style="margin-bottom:40px;">We piloted the solution with 17 schools over a 3-month period during the award cycle, conducting follow-up interviews to gauge impact.</p>
@@ -520,7 +527,7 @@
     </div>
 
     <div class="section-full section-full--gray">
-      <div class="section-label">Metrics of Success for the EAP</div>
+      <h2 class="section-label">Metrics of Success for the EAP</h2>
       <div class="section-sublabel">What We Measured</div>
       <div class="metrics-grid">
         <div class="metric-card">
@@ -563,7 +570,7 @@
       </svg>
     </div>
     <div class="section-half">
-      <div class="section-label">Key Learnings from the EAP</div>
+      <h2 class="section-label">Key Learnings from the EAP</h2>
       <div class="section-sublabel">Pros</div>
       <p class="section-body">Decreased support requests and higher task completion rates without manual admin intervention.</p>
       <div class="section-sublabel">Cons</div>
@@ -573,12 +580,12 @@
 
     <!-- Outcomes -->
     <div class="section-full" style="padding-top:32px;padding-bottom:32px;">
-      <div class="section-label">User Behavior Change</div>
+      <h2 class="section-label">User Behavior Change</h2>
       <div class="section-sublabel">Following EAP with 17 Schools</div>
       <p class="section-body">We saw a shift toward self-sufficiency. Admins stopped relying on training workshops and began using the dashboard proactively, often setting it as their home screen.</p>
     </div>
     <div class="section-full">
-      <div class="section-label">Business Outcomes</div>
+      <h2 class="section-label">Business Outcomes</h2>
       <div class="section-sublabel">Results</div>
       <p class="section-body">The result: a measurable drop in support requests. While these metrics are anecdotal, over the next fiscal year churn dropped by 17%, allowing us to meet our churn rate goal. The intuitive design gave the team fresh confidence to upsell the platform across other departments.</p>
     </div>

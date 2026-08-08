@@ -9,6 +9,13 @@
   <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
   <script>WebFont.load({ google: { families: ["Great Vibes:400", "Open Sans:300,400,700", "Bitter:400,700"] } });</script>
   <style>
+    /* ─── Focus visibility (a11y) ───────────────────── */
+    a:focus-visible, button:focus-visible, .nav-hamburger:focus-visible {
+      outline: 2px solid #0e0c0c;
+      outline-offset: 2px;
+      border-radius: 2px;
+    }
+
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     a { text-decoration: none; }
 
@@ -121,7 +128,7 @@
       font-weight: 700;
       letter-spacing: 3px;
       text-transform: uppercase;
-      color: #0cc4c6;
+      color: #087274;
       margin-top: 24px;
     }
 
@@ -147,7 +154,7 @@
       content: '—';
       position: absolute;
       left: 0;
-      color: #0cc4c6;
+      color: #087274;
       font-weight: 700;
     }
 
@@ -189,7 +196,7 @@
       font-weight: 700;
       letter-spacing: 3px;
       text-transform: uppercase;
-      color: #0cc4c6;
+      color: #087274;
     }
 
     /* ─── Global Nav ─────────────────────────────────────── */
@@ -225,7 +232,7 @@
       color: #0e0c0c;
       transition: color 0.2s ease;
     }
-    .nav-link:hover { color: #0cc4c6; }
+    .nav-link:hover { color: #087274; }
     .nav-link--accent { color: #fe204a; }
     .nav-link--accent:hover { color: #b5012f; }
 
@@ -321,26 +328,26 @@
     <!-- Hero -->
     <div class="case-hero">
       <div class="case-hero__eyebrow">Essay</div>
-      <div class="case-hero__title">Empathy and AI</div>
+      <h1 class="case-hero__title">Empathy and AI</h1>
     </div>
 
     <!-- Intro -->
     <div class="section-full">
-      <div class="section-label">What kind of empathy do we want from our AI support agents?</div>
+      <h2 class="section-label">What kind of empathy do we want from our AI support agents?</h2>
       <p class="section-body">At Blackbaud, and across the tech industry, there's a growing shift toward AI-powered support agents. For this transition to succeed, these agents must genuinely connect with users. Users often reach out for support in a heightened emotional state, frustrated after trying to resolve issues on their own. By the time they engage with a support chat, their patience may be worn thin. In this context, AI agents must build trust, show an understanding of the problem, and remain aware of the emotional state of the user.</p>
       <p class="section-body">So how can a chat-based AI agent help users feel heard and confident their issue is understood?</p>
     </div>
 
     <!-- The empathy problem -->
     <div class="section-full">
-      <div class="section-label">The Empathy Problem</div>
+      <h2 class="section-label">The Empathy Problem</h2>
       <p class="section-body">People empathize with others naturally, but AI agents do not. One of the ways people show empathy is to say something like, "I am sorry you are frustrated, I understand why you would be frustrated given what you have gone through." In doing so, humans effectively communicate that they recognize and understand the root of the other person's feelings. When done authentically, this creates a shared understanding of the situation and establishes an expectation that the individual will help alleviate the source of frustration if possible.</p>
       <p class="section-body">The core challenge with building trust between an AI agent and a customer is that if an AI tells a customer "I understand what you are feeling," it is rarely received well and often feels disingenuous. Therefore, we must rethink how we build that trust. The traditional "Golden Rule" (treating others how you want to be treated) is no longer enough. Instead, we must treat users how they want to be treated. For AI support, this means adapting communication to meet users' needs and preferences in the immediate moment.</p>
     </div>
 
     <!-- Warmth vs Competence -->
     <div class="section-full">
-      <div class="section-label">Warmth vs. Competence</div>
+      <h2 class="section-label">Warmth vs. Competence</h2>
       <p class="section-body">Research shows that people evaluate others based on two distinct dimensions: warmth and competence. While warmth helps build rapport, competence (demonstrating the actual ability to solve problems) is equally, if not more, important. Being "nice" simply isn't enough. Phrases like "I understand how you feel" can sound insincere or condescending coming from a machine. Instead, AI agents should demonstrate true understanding by referencing the user's specific context, without requiring them to repeat themselves.</p>
       <p class="section-body">This strategy involves leveraging existing backend data, such as customer tenure, role, app usage patterns, seasonal workflows, and recent support history. It also means adapting the communication style to match a user's explicit or implicit preferences, whether they favor detailed, step-by-step explanations or concise, transactional responses. Armed with this contextual awareness, an AI agent can build foundational trust by joining the conversation with a holistic understanding of what the user is experiencing, proving it is "aware" of their situation far beyond just knowing their name.</p>
     </div>
@@ -353,7 +360,7 @@
 
     <!-- Context-aware design -->
     <div class="section-full">
-      <div class="section-label">Context-Aware Support Design</div>
+      <h2 class="section-label">Context-Aware Support Design</h2>
       <p class="section-body">This type of proactive communication effectively demonstrates an understanding of what the user was doing right before they reached out for help. It highlights an awareness of their current award cycle stages and accounts for how comfortable and experienced the customer is within the application. Consequently, the system can instantly tailor its recommendations to the appropriate technical level.</p>
       <ul class="content-list">
         <li>Customer tenure and role inform the assumed level of technical familiarity</li>
@@ -365,7 +372,7 @@
 
     <!-- Closing -->
     <div class="section-full">
-      <div class="section-label">Beyond Superficial Empathy</div>
+      <h2 class="section-label">Beyond Superficial Empathy</h2>
       <p class="section-body">By designing AI support agents to be context-aware, bespoke, and solution-oriented, we can move past superficial empathy formulas. Instead, we can create genuinely meaningful experiences that build trust and ensure customers get the precise, high-competence help they need in a timely, efficient manner.</p>
     </div>
 

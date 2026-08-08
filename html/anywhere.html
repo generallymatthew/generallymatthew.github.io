@@ -9,6 +9,13 @@
   <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
   <script>WebFont.load({ google: { families: ["Open Sans:400,700", "Bitter:400,700"] } });</script>
   <style>
+    /* ─── Focus visibility (a11y) ───────────────────── */
+    a:focus-visible, button:focus-visible, .nav-hamburger:focus-visible {
+      outline: 2px solid #0e0c0c;
+      outline-offset: 2px;
+      border-radius: 2px;
+    }
+
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     a { text-decoration: none; }
 
@@ -58,7 +65,7 @@
       color: #0e0c0c;
       transition: color 0.2s ease;
     }
-    .nav-link:hover { color: #0cc4c6; }
+    .nav-link:hover { color: #087274; }
     .nav-hamburger {
       display: none;
       flex-direction: column;
@@ -185,7 +192,7 @@
       content: '—';
       position: absolute;
       left: 0;
-      color: #0cc4c6;
+      color: #087274;
       font-weight: 700;
     }
 
@@ -241,12 +248,12 @@
   <div class="page">
 
     <div class="case-hero">
-      <div class="case-hero__title">Anywhere Messaging App</div>
+      <h1 class="case-hero__title">Anywhere Messaging App</h1>
       <div class="case-hero__company">Republic Wireless</div>
     </div>
 
     <div class="section-full">
-      <div class="section-label">User Experience</div>
+      <h2 class="section-label">User Experience</h2>
       <div class="section-sublabel">Challenges</div>
       <p class="section-body">The goal of the Anywhere app was to allow users to untether their phone number from their physical device, enabling calls and texts from any screen.</p>
       <div class="section-sublabel" style="margin-top:24px;">Experience Goals</div>
@@ -258,7 +265,7 @@
     <div class="section-divider"></div>
 
     <div class="section-half">
-      <div class="section-label">Mobile App</div>
+      <h2 class="section-label">Mobile App</h2>
       <div class="section-sublabel">Learnings</div>
       <p class="section-body">Due to technical limitations in how Android secures internal SMS and MMS databases, we could only access messages if we requested a specific permission during app installation. This required us to build our own mobile app.</p>
       <p class="section-body">Messaging apps are deceptively complex from a technical standpoint, so we chose to fork the native Messenger app and re-skin it with our brand and design patterns from the desktop app.</p>
@@ -268,7 +275,7 @@
     </div>
 
     <div class="section-half">
-      <div class="section-label">Tablet App</div>
+      <h2 class="section-label">Tablet App</h2>
       <div class="section-sublabel">Learnings</div>
       <p class="section-body">Due to the requirement that the tablet app work in both portrait and landscape modes, we needed to overhaul the layout structure. We found a design pattern that worked across both iOS and Android.</p>
       <p class="section-body">Users liked this layout so much they asked us to bring it into the desktop app as well.</p>
@@ -278,7 +285,7 @@
     </div>
 
     <div class="section-half section-half--gray">
-      <div class="section-label">Desktop Calling</div>
+      <h2 class="section-label">Desktop Calling</h2>
       <div class="section-sublabel">Learnings</div>
       <p class="section-body">The first round of designs tried to integrate the calling interface directly into the desktop app. The complexity this created when switching conversations during an active call made the concept unworkable.</p>
       <p class="section-body">Our solution was to launch the call interface as a separate modal, independent of the messaging UI, keeping both experiences focused and uncluttered.</p>

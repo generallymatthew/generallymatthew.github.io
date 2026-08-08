@@ -9,6 +9,13 @@
   <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
   <script>WebFont.load({ google: { families: ["Open Sans:400,700", "Bitter:400,700"] } });</script>
   <style>
+    /* ─── Focus visibility (a11y) ───────────────────── */
+    a:focus-visible, button:focus-visible, .nav-hamburger:focus-visible {
+      outline: 2px solid #0e0c0c;
+      outline-offset: 2px;
+      border-radius: 2px;
+    }
+
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     a { text-decoration: none; }
 
@@ -58,7 +65,7 @@
       color: #0e0c0c;
       transition: color 0.2s ease;
     }
-    .nav-link:hover { color: #0cc4c6; }
+    .nav-link:hover { color: #087274; }
     .nav-hamburger {
       display: none;
       flex-direction: column;
@@ -192,7 +199,7 @@
       content: '—';
       position: absolute;
       left: 0;
-      color: #0cc4c6;
+      color: #087274;
       font-weight: 700;
     }
 
@@ -252,12 +259,12 @@
   <div class="page">
 
     <div class="case-hero">
-      <div class="case-hero__title">Device Activation</div>
+      <h1 class="case-hero__title">Device Activation</h1>
       <div class="case-hero__company">Republic Wireless</div>
     </div>
 
     <div class="section-full">
-      <div class="section-label">User Experience</div>
+      <h2 class="section-label">User Experience</h2>
       <div class="section-sublabel">Challenges</div>
       <p class="section-body">With no physical stores for customers to use for help activating the phone, we had to figure out an easy way for our users to activate their own phones once they arrived in the mail. The experience had to be so simple that anyone could use it, not just employees at the store.</p>
       <p class="section-body">Getting the activation experience right was crucial. Every Republic customer would have to use it, and we were planning to sell a great deal of phones. A high support ticket volume would make it hard to scale as quickly as forecasted. It was also the second time they would have interacted with us.</p>
@@ -274,18 +281,18 @@
     <div class="section-divider"></div>
 
     <div class="section-full" style="padding-top:32px;padding-bottom:0;">
-      <div class="section-label">Workflow</div>
+      <h2 class="section-label">Workflow</h2>
     </div>
     <div class="section-image-full" style="display:flex;justify-content:center;">
       <img src="../images/Workflow.png" alt="Device activation workflow diagram" style="width:75%;cursor:zoom-in;" id="workflow-img">
     </div>
 
     <div class="section-full">
-      <div class="section-label">User Interface</div>
+      <h2 class="section-label">User Interface</h2>
     </div>
 
     <div class="section-half">
-      <div class="section-label">Welcome Screen</div>
+      <h2 class="section-label">Welcome Screen</h2>
       <div class="section-sublabel">Learnings</div>
       <p class="section-body">User testing demonstrated that users did not know if they had an account or what email they used when signing up.</p>
       <p class="section-body">To solve this, we gave a single form field to fill out. On the back end, we queried all known accounts to see if there was an existing account with that email. If so, the phone would activate on that account. If not, we treated it like a new customer.</p>
@@ -295,7 +302,7 @@
     </div>
 
     <div class="section-half section-half--gray">
-      <div class="section-label">Number Selection</div>
+      <h2 class="section-label">Number Selection</h2>
       <div class="section-sublabel">Learnings</div>
       <p class="section-body">Version one of this design confused our customers, leading to mistakes and split accounts.</p>
       <p class="section-body">Once we reframed the question by asking which phone number they wanted on the new phone, the confusion was alleviated. This saved us hours of support time: from processing hundreds of split accounts manually to no longer needing support in this area at all.</p>
@@ -305,7 +312,7 @@
     </div>
 
     <div class="section-half">
-      <div class="section-label">Plan Selection</div>
+      <h2 class="section-label">Plan Selection</h2>
       <div class="section-sublabel">Learnings</div>
       <p class="section-body">We initially thought users would want to see unlimited wifi calling and texting within each plan. Instead, it confused them: they already expected wifi usage to be unlimited.</p>
       <p class="section-body">The three things they cared about were how much data, how much it cost, and what kind of data (high speed?). Our contract with Sprint did not allow us to reference their network directly, so we used LTE 4G. Testing showed high comprehension of this technical language.</p>
@@ -315,7 +322,7 @@
     </div>
 
     <div class="section-half section-half--gray">
-      <div class="section-label">Order Confirmation</div>
+      <h2 class="section-label">Order Confirmation</h2>
       <div class="section-sublabel">Learnings</div>
       <p class="section-body">Due to 'Truth in Taxation' laws, we had to show a detailed breakdown of all taxes applied to any order, but we could not calculate taxes until we knew the billing zip code. Hence we needed a 'confirm order' screen.</p>
       <p class="section-body">Our users wanted to be able to view the details, but did not need them to be expanded by default.</p>
@@ -325,7 +332,7 @@
     </div>
 
     <div class="section-half">
-      <div class="section-label">Activation Complete</div>
+      <h2 class="section-label">Activation Complete</h2>
       <div class="section-sublabel">Outcome</div>
       <p class="section-body">The activation workflow was successful. Open ticket rates were lower than expected, down from a projected 5% to 3.5%. This meant significantly less was spent on support than forecasted, which was crucial at that stage of the company's growth.</p>
       <p class="section-body">The project was a success with both customers and internal teams, particularly the support team.</p>

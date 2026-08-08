@@ -9,6 +9,13 @@
   <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
   <script>WebFont.load({ google: { families: ["Open Sans:400,700", "Bitter:400,700"] } });</script>
   <style>
+    /* ─── Focus visibility (a11y) ───────────────────── */
+    a:focus-visible, button:focus-visible, .nav-hamburger:focus-visible {
+      outline: 2px solid #0e0c0c;
+      outline-offset: 2px;
+      border-radius: 2px;
+    }
+
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     a { text-decoration: none; }
 
@@ -58,7 +65,7 @@
       color: #0e0c0c;
       transition: color 0.2s ease;
     }
-    .nav-link:hover { color: #0cc4c6; }
+    .nav-link:hover { color: #087274; }
     .nav-hamburger {
       display: none;
       flex-direction: column;
@@ -202,7 +209,7 @@
       content: '—';
       position: absolute;
       left: 0;
-      color: #0cc4c6;
+      color: #087274;
       font-weight: 700;
     }
 
@@ -259,12 +266,12 @@
   <div class="page">
 
     <div class="case-hero">
-      <div class="case-hero__title">Configure Your Phone</div>
+      <h1 class="case-hero__title">Configure Your Phone</h1>
       <div class="case-hero__company">Republic Wireless</div>
     </div>
 
     <div class="section-full">
-      <div class="section-label">Experience Design Strategy</div>
+      <h2 class="section-label">Experience Design Strategy</h2>
       <div class="section-sublabel">Challenges</div>
       <p class="section-body">The Relay app had to serve three separate functions for users: managing Relay devices, tracking location, and enabling push-to-talk communication.</p>
       <div class="section-sublabel" style="margin-top:24px;">Experience Goals</div>
@@ -276,21 +283,21 @@
     <div class="section-divider"></div>
 
     <div class="section-full" style="padding-top:32px;padding-bottom:0;">
-      <div class="section-label">Workflow</div>
+      <h2 class="section-label">Workflow</h2>
     </div>
     <div class="section-image-full">
       <img src="../images/relay-workflow-1.png" alt="Relay app workflow diagram">
     </div>
 
     <div class="section-full">
-      <div class="section-label">Interaction Guide</div>
+      <h2 class="section-label">Interaction Guide</h2>
     </div>
     <div class="section-gif-full">
       <img src="../images/v0.9-relay-app-interactions.gif" alt="Relay app interaction guide">
     </div>
 
     <div class="section-half">
-      <div class="section-label">Information Architecture</div>
+      <h2 class="section-label">Information Architecture</h2>
       <div class="section-sublabel">Learnings</div>
       <p class="section-body">We designed the IA solution after watching beta testers in the field.</p>
       <ul class="content-list">
@@ -304,7 +311,7 @@
     </div>
 
     <div class="section-half section-half--gray">
-      <div class="section-label">Device Management</div>
+      <h2 class="section-label">Device Management</h2>
       <div class="section-sublabel">Learnings</div>
       <p class="section-body">Since Relay devices had no screens, all complex interactions were offloaded to the app. We had no clear data on users' mental models: did they think of channels first, or devices first?</p>
       <p class="section-body">We designed the IA to support both mental models and watched analytics to see how users navigated. Most went to channels first, then selected the Relay device they wanted to manage from there.</p>

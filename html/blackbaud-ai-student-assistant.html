@@ -9,6 +9,13 @@
   <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
   <script>WebFont.load({ google: { families: ["Great Vibes:400", "Open Sans:300,400,700", "Bitter:400,700"] } });</script>
   <style>
+    /* ─── Focus visibility (a11y) ───────────────────── */
+    a:focus-visible, button:focus-visible, .nav-hamburger:focus-visible {
+      outline: 2px solid #0e0c0c;
+      outline-offset: 2px;
+      border-radius: 2px;
+    }
+
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     a { text-decoration: none; }
 
@@ -141,7 +148,7 @@
       content: '—';
       position: absolute;
       left: 0;
-      color: #0cc4c6;
+      color: #087274;
       font-weight: 700;
     }
 
@@ -297,7 +304,7 @@
       font-weight: 700;
       letter-spacing: 3px;
       text-transform: uppercase;
-      color: #0cc4c6;
+      color: #087274;
     }
 
     /* ─── Global Nav ─────────────────────────────────────── */
@@ -333,7 +340,7 @@
       color: #0e0c0c;
       transition: color 0.2s ease;
     }
-    .nav-link:hover { color: #0cc4c6; }
+    .nav-link:hover { color: #087274; }
     .nav-link--accent { color: #fe204a; }
     .nav-link--accent:hover { color: #b5012f; }
 
@@ -435,13 +442,13 @@
 
     <!-- Hero -->
     <div class="case-hero">
-      <div class="case-hero__title">Blackbaud AI Student Assistant</div>
+      <h1 class="case-hero__title">Blackbaud AI Student Assistant</h1>
       <div class="case-hero__company">Blackbaud LMS</div>
     </div>
 
     <!-- Overview -->
     <div class="section-half">
-      <div class="section-label">Project Origins</div>
+      <h2 class="section-label">Project Origins</h2>
       <div class="section-sublabel">Background</div>
       <p class="section-body">In 2024, Blackbaud looked for ways to monetize AI within their existing client base. The product team proposed a "Student Assistant" (code-named Study Buddy) as a premium offering.</p>
       <div class="section-sublabel">Discovery</div>
@@ -452,9 +459,9 @@
     </div>
 
     <div class="section-full">
-      <div class="section-label">Problem Statement</div>
+      <h2 class="section-label">Problem Statement</h2>
       <p class="section-body">Classrooms are stretched thin, and teachers can't be available 24/7. Students often get stuck on homework, leading to delayed help or frustration when they can't find clear answers.</p>
-      <div class="section-label" style="margin-top:40px;">Hypothesis</div>
+      <h2 class="section-label" style="margin-top:40px;">Hypothesis</h2>
       <p class="section-body">If we integrate a 24/7, AI-powered tutor into our LMS, we can scale an educator's reach and provide personalized guidance without increasing the teacher's workload. We believe this will bridge the gap between instruction and independent study by acting as an interactive guide rather than an answer key.</p>
     </div>
 
@@ -510,7 +517,7 @@
 
     <!-- UI Design Investigation -->
     <div class="section-full">
-      <div class="section-label">UI Design Investigation</div>
+      <h2 class="section-label">UI Design Investigation</h2>
       <p class="section-body">We know the basic functionality that we want for the chat functionality, but we need to figure out what makes for an engaging chat UI for kids 5th–12th grade, and what makes for an engaging personality from the AI assistant.</p>
       <p class="section-body">Below is the existing chat UI design from our design system, which was designed to let non-profit accountants chat with AI agents. To the team's eyes, this design felt lifeless and dull, and not engaging to look at. There was also a distinct lack of personality behind the chat UI.</p>
       <p class="section-body">So we designed two different UI themes and put them in front of kids to get their feedback.</p>
@@ -528,7 +535,7 @@
 
     <!-- Student Feedback -->
     <div class="section-full">
-      <div class="section-label" style="text-align:center;">Student Feedback</div>
+      <h2 class="section-label" style="text-align:center;">Student Feedback</h2>
 
       <div class="feedback-group">
         <div class="feedback-group__persona">The 5th Grader (Age 10–11)</div>
@@ -575,7 +582,7 @@
 
     <!-- Insight from User Feedback -->
     <div class="section-full">
-      <div class="section-label">Insight from User Feedback on the UI Design</div>
+      <h2 class="section-label">Insight from User Feedback on the UI Design</h2>
       <div class="section-sublabel">Key Takeaways</div>
       <ol style="font-family:'Open Sans',sans-serif;font-size:16px;line-height:28px;color:#0e0c0c;padding-left:20px;max-width:720px;">
         <li style="margin-bottom:12px;">The existing design pattern was boring but usable by all.</li>
@@ -593,13 +600,13 @@
 
     <!-- Early Access Program -->
     <div class="section-full" style="display:flex; flex-direction:column; align-items:center; text-align:center;">
-      <div class="section-label">Early Access Program</div>
+      <h2 class="section-label">Early Access Program</h2>
       <div class="section-sublabel">Testing the Viability of a New Product</div>
     </div>
 
     <!-- Metrics -->
     <div class="section-full section-full--gray">
-      <div class="section-label">Metrics of Success</div>
+      <h2 class="section-label">Metrics of Success</h2>
       <div class="metrics-grid">
         <div class="metric-card">
           <div class="metric-card__value">01</div>
@@ -618,7 +625,7 @@
 
     <!-- Research -->
     <div class="section-half">
-      <div class="section-label">User Research</div>
+      <h2 class="section-label">User Research</h2>
       <div class="section-sublabel">Pilot Study</div>
       <p class="section-body">We piloted a sandboxed version of Study Buddy in 20 classrooms across English, History, and Social Studies. The results were surprising:</p>
       <p class="section-body"><strong>Low Engagement:</strong> Despite teacher encouragement, usage hovered around 15%, with few repeat users.</p>
@@ -641,7 +648,7 @@
       <div style="font-family:'Open Sans',sans-serif;font-size:14px;color:#666;margin-top:8px;text-align:center;max-width:280px;">Killing a failing feature early is a successful outcome, not a failure.</div>
     </div>
     <div class="section-half section-half--gray">
-      <div class="section-label">Business Outcomes</div>
+      <h2 class="section-label">Business Outcomes</h2>
       <div class="section-sublabel">Decision</div>
       <p class="section-body">We pulled the plug. While we knew it was failing, the "why" took a moment to uncover. This early call let us pivot to an AI tool for teacher report cards, saving our small team six months of wasted effort: a perfect case for why UX matters in the product lifecycle.</p>
       <div class="section-sublabel" style="margin-top:24px;">Key Learnings</div>

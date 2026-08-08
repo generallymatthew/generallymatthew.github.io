@@ -9,6 +9,13 @@
   <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
   <script>WebFont.load({ google: { families: ["Great Vibes:400", "Open Sans:300,400,700", "Bitter:400,700"] } });</script>
   <style>
+    /* ─── Focus visibility (a11y) ───────────────────── */
+    a:focus-visible, button:focus-visible, .nav-hamburger:focus-visible {
+      outline: 2px solid #0e0c0c;
+      outline-offset: 2px;
+      border-radius: 2px;
+    }
+
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     a { text-decoration: none; }
 
@@ -148,7 +155,7 @@
       content: '—';
       position: absolute;
       left: 0;
-      color: #0cc4c6;
+      color: #087274;
       font-weight: 700;
     }
 
@@ -304,7 +311,7 @@
       font-weight: 700;
       letter-spacing: 3px;
       text-transform: uppercase;
-      color: #0cc4c6;
+      color: #087274;
     }
 
     /* ─── Global Nav ─────────────────────────────────────── */
@@ -340,7 +347,7 @@
       color: #0e0c0c;
       transition: color 0.2s ease;
     }
-    .nav-link:hover { color: #0cc4c6; }
+    .nav-link:hover { color: #087274; }
     .nav-link--accent { color: #fe204a; }
     .nav-link--accent:hover { color: #b5012f; }
 
@@ -434,16 +441,16 @@
 
     <!-- Hero -->
     <div class="case-hero">
-      <div class="case-hero__title">Fundraising Agent Performance Metrics</div>
+      <h1 class="case-hero__title">Fundraising Agent Performance Metrics</h1>
       <div class="case-hero__company">Blackbaud FENXT</div>
     </div>
 
     <!-- Project Origins -->
     <div class="section-full" style="padding-bottom:0;">
-      <div class="section-label">Project Origins</div>
+      <h2 class="section-label">Project Origins</h2>
       <p class="section-body">Users have repeatedly told us that performance metrics are crucial to understanding the effectiveness of this new fundraising tool. In this new world of AI agents, we needed to determine if traditional dashboards still deliver genuine value to users.</p>
 
-      <div class="section-label">On discovery calls</div>
+      <h2 class="section-label">On discovery calls</h2>
     </div>
 
     <div class="section-half" style="justify-content:flex-start;padding-top:32px;min-height:0;">
@@ -465,13 +472,13 @@
 
     <!-- Problem + Hypothesis -->
     <div class="section-full">
-      <div class="section-label">Problem Statement</div>
+      <h2 class="section-label">Problem Statement</h2>
       <p class="section-body">Nurturing relationships with donors takes time (up to 6 months), but users evaluate success from day one of a contract. Passive dashboards risk creating a frustrating experience during this long lead time.</p>
 
-      <div class="section-label" style="margin-top:32px;">Hypothesis</div>
+      <h2 class="section-label" style="margin-top:32px;">Hypothesis</h2>
       <p class="section-body">We hypothesized that alternative data visualization formats, such as report cards or narrative "wrapped" experiences, would better communicate performance and reduce user anxiety compared to classic dashboards.</p>
 
-      <div class="section-label" style="margin-top:32px;">User Interviews</div>
+      <h2 class="section-label" style="margin-top:32px;">User Interviews</h2>
       <div class="section-sublabel">On Different Performance Metrics Concepts</div>
     </div>
 
@@ -480,7 +487,7 @@
       <img src="../images/agentic-dashaboard-classic.png" alt="Classic dashboard design" class="lightbox-trigger" data-src="../images/agentic-dashaboard-classic.png">
     </div>
     <div class="section-half" style="justify-content:flex-start;">
-      <div class="section-label">Classic Dashboard</div>
+      <h2 class="section-label">Classic Dashboard</h2>
       <div class="section-sublabel">Design Strategy</div>
       <p class="section-body">Real-time revenue trend lines and engagement pie charts give an at-a-glance read on whether the agent is on target. Escalated, reviewed, and flagged message tiles act as a quick operational health check.</p>
       <div class="section-sublabel">User Feedback</div>
@@ -492,7 +499,7 @@
       <img src="../images/Agentic-dashboard-spotify.png" alt="Q1 Metrics to remember: Spotify Wrapped style design" class="lightbox-trigger" data-src="../images/Agentic-dashboard-spotify.png">
     </div>
     <div class="section-half" style="justify-content:flex-start;">
-      <div class="section-label">Spotify Wrapped</div>
+      <h2 class="section-label">Spotify Wrapped</h2>
       <div class="section-sublabel">Design Strategy</div>
       <p class="section-body">Curated cards like "Your top 3 best performing message types" and "Agent Successes" turn the data into a shareable story of impact, built to be put in front of a board, leadership team, or funder.</p>
       <div class="section-sublabel">User Feedback</div>
@@ -504,7 +511,7 @@
       <img src="../images/Agentic dashboard-report-card.png" alt="Development Agent report card design" class="lightbox-trigger" data-src="../images/Agentic dashboard-report-card.png">
     </div>
     <div class="section-half" style="justify-content:flex-start;">
-      <div class="section-label">Report Card Design</div>
+      <h2 class="section-label">Report Card Design</h2>
       <div class="section-sublabel">Design Strategy</div>
       <p class="section-body">Metrics are grouped into thematic pillars (Revenue, Engagement, Costs, Experience) and summarized as a letter grade, answering "how is the agent doing?" without asking the user to interpret raw numbers themselves.</p>
       <div class="section-sublabel">User Feedback</div>
@@ -513,7 +520,7 @@
 
     <!-- Validation -->
     <div class="section-full">
-      <div class="section-label">Validation</div>
+      <h2 class="section-label">Validation</h2>
 
       <div class="section-sublabel">Testing Results</div>
       <div class="metrics-grid">
@@ -531,7 +538,7 @@
         </div>
       </div>
 
-      <div class="section-label" style="margin-top:32px;">Design Pivot</div>
+      <h2 class="section-label" style="margin-top:32px;">Design Pivot</h2>
       <div class="section-sublabel">The "Aha!" Moment</div>
       <p class="section-body">Our user testing led to a critical realization. We realized that our static dashboard concepts would likely cause anxiety for fundraisers. Because the agent's strategy involves sending five non-fundraising emails over several weeks before making an ask, the "Total Raised" metric would likely sit at $0 for the first six months. Seeing a stagnant zero would be disheartening for any user.</p>
       <p class="section-body">We pivoted by brainstorming a weekly report that focuses on active, meaningful data. Instead of forcing a static dashboard, we leaned into the "Spotify Wrapped" narrative approach as our primary way to communicate performance. We also added context by comparing current metrics to the previous week's performance. While it wasn't a silver bullet, it provided a necessary benchmark that turned a potential frustration into a clear, steady measure of progress.</p>
@@ -547,13 +554,13 @@
 
     <!-- User Behavior Change -->
     <div class="section-full section-full--gray">
-      <div class="section-label">User Behavior Change</div>
+      <h2 class="section-label">User Behavior Change</h2>
       <p class="section-body">Moving to a narrative-driven, "Wrapped" style changed the game. Instead of just watching raw data, fundraisers started feeling like they were telling the story of the agent's impact, which naturally built more confidence and pride. The real shift happened when they stopped micromanaging every email and started confidently sharing the weekly reports directly with their managers and boards.</p>
     </div>
 
     <!-- Business Outcomes -->
     <div class="section-full">
-      <div class="section-label">Business Outcomes</div>
+      <h2 class="section-label">Business Outcomes</h2>
       <p class="section-body">Our strategy is really about transparency. By showing real-time revenue targets alongside the narrative wins, we give leadership the high-level insights they actually need. Since this agent is a big investment for our clients, proving that value is crucial for renewals. We basically took what felt like a mysterious black box and turned it into a partner that our clients can actually trust.</p>
     </div>
 
