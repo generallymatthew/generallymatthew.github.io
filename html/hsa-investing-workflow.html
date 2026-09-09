@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>HSA Investing: Matthew Barton</title>
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <link href="../images/favicon.png" rel="shortcut icon" type="image/x-icon">
+  <link href="../images/webclip.png" rel="apple-touch-icon">
+  <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+  <script>WebFont.load({ google: { families: ["Open Sans:300,400,700", "Bitter:400,700", "IBM Plex Sans:400,500,600,700"] } });</script>
+  <style>
+    a:focus-visible, button:focus-visible, .nav-hamburger:focus-visible, .screen-frame:focus-visible {
+      outline: 2px solid #0e0c0c; outline-offset: 2px; border-radius: 2px;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    a { text-decoration: none; }
+    body { display: flex; flex-direction: column; align-items: center; background: #f7f7f7; font-family: 'Open Sans', sans-serif; }
+    .page { display: flex; flex-wrap: wrap; width: 100%; max-width: 1080px; }
+
+    .case-hero { width: 100%; min-height: 240px; display: flex; flex-direction: column; justify-content: center; padding: 56px 64px; background: #98e5e6; }
+    .case-hero__eyebrow { font-size: 12px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: #0e0c0c; opacity: 0.5; margin-bottom: 12px; }
+    .case-hero__title { font-size: 34px; font-weight: 700; color: #0e0c0c; margin-bottom: 10px; max-width: 720px; }
+    .case-hero__sub { font-size: 17px; font-weight: 300; line-height: 28px; color: #0e0c0c; max-width: 620px; }
+
+    .section-full { width: 100%; padding: 56px 64px; background: #fff; }
+    .section-full--gray { background: #ebebeb; }
+    .section-label { font-size: 20px; font-weight: 700; color: #0e0c0c; margin-bottom: 16px; }
+    .section-sublabel { font-size: 12px; font-weight: 700; color: #fe204a; letter-spacing: 3px; text-transform: uppercase; margin: 28px 0 12px; }
+    .section-sublabel:first-of-type { margin-top: 0; }
+    .section-body { font-size: 16px; line-height: 28px; color: #0e0c0c; margin-bottom: 14px; max-width: 720px; }
+    .section-body:last-child { margin-bottom: 0; }
+    .copy-list { list-style: none; margin: 0 0 14px; max-width: 720px; }
+    .copy-list li { font-size: 16px; line-height: 28px; color: #0e0c0c; padding-left: 22px; margin-bottom: 10px; position: relative; }
+    .copy-list li::before { content: '\2022'; position: absolute; left: 0; color: #087274; font-weight: 700; }
+    .copy-list li strong { font-weight: 700; }
+
+    .flow-band { width: 100%; display: flex; gap: 20px; align-items: flex-start; padding: 44px 64px 8px; background: #fff; }
+    .flow-band__letter { flex: none; width: 34px; height: 34px; display: flex; align-items: center; justify-content: center; background: #0e0c0c; color: #fff; font-weight: 700; font-size: 14px; border-radius: 2px; }
+    .flow-band__title { font-size: 19px; font-weight: 700; color: #0e0c0c; margin-bottom: 6px; }
+    .flow-band__intro { font-size: 15px; line-height: 25px; color: #444; max-width: 680px; }
+
+    .screen-row { width: 100%; display: flex; gap: 44px; align-items: flex-start; padding: 28px 64px; background: #fff; scroll-margin-top: 88px; }
+    .screen-row:nth-of-type(even) { background: #fbfbfb; }
+    .screen-copy { flex: none; width: 300px; padding-top: 8px; }
+    .screen-copy__eyebrow { font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: #fe204a; margin-bottom: 10px; line-height: 1.5; }
+    .screen-copy__title { font-size: 18px; font-weight: 700; color: #0e0c0c; margin-bottom: 12px; }
+    .screen-copy__body { font-size: 14.5px; line-height: 25px; color: #333; margin-bottom: 12px; }
+    .screen-copy__note { font-size: 13px; line-height: 21px; color: #767676; font-style: italic; border-left: 2px solid #98e5e6; padding-left: 10px; margin-top: 16px; }
+
+    .screen-frame { flex: 1; min-width: 0; background: #e6e6e6; border: 1px solid #d8d8d8; padding: 22px; display: flex; justify-content: center; align-items: flex-start; cursor: zoom-in; overflow: hidden; }
+    .screen-frame__wrap { --wf-scale: 0.62; width: calc(720px * var(--wf-scale)); max-width: 100%; overflow: hidden; }
+    .screen-frame__inner { width: 720px; transform: scale(var(--wf-scale)); transform-origin: top left; }
+
+    .wf{width:720px;background:#ffffff;border:1px solid #bdbdbd;border-radius:3px;overflow:hidden;display:flex;flex-direction:column;min-height:440px;box-shadow:none}
+    .wf-chrome{height:34px;display:flex;align-items:center;gap:7px;padding:0 14px;background:#ebebeb;border-bottom:1px solid #cfcfcf}
+    .wf-tl{width:9px;height:9px;border-radius:50%;background:#ded4c1}
+    .wf-url{margin-left:8px;flex:1;height:16px;border-radius:2px;background:#ffffff;border:1px solid #cfcfcf}
+    .wf-nav{height:44px;display:flex;align-items:center;gap:20px;padding:0 22px;border-bottom:1px solid #dcdcdc;font:600 10px 'IBM Plex Sans',Helvetica,Arial,sans-serif;letter-spacing:.1em;text-transform:uppercase;color:#8a8a8a}
+    .wf-brand{width:20px;height:20px;border-radius:50%;background:#d6d6d6}
+    .wf-body{flex:1;display:flex}
+    .wf-rail{width:186px;border-right:1px solid #dcdcdc;background:#f7f7f7;padding:20px 16px;display:flex;flex-direction:column;gap:11px}
+    .wf-main{flex:1;padding:26px 30px 28px;display:flex;flex-direction:column;gap:16px}
+    .wf-h{font:700 20px/1.3 'IBM Plex Sans',Helvetica,Arial,sans-serif;color:#111111;margin:0}
+    .wf-p{font:400 12.5px/1.5 'IBM Plex Sans',Helvetica,Arial,sans-serif;color:#666666;margin:0}
+    .wf-line{height:9px;border-radius:1px;background:#dadada}
+    .wf-box{background:#f5f5f5;border:1px solid #d0d0d0;border-radius:2px;padding:16px;display:flex;flex-direction:column;gap:10px}
+    .wf-field{border:1px solid #bdbdbd;border-radius:2px;padding:9px 15px;font:400 12px 'IBM Plex Sans',Helvetica,Arial,sans-serif;color:#8a8a8a;background:#fff}
+    .wf-btn{border-radius:2px;padding:10px 20px;text-align:center;font:600 12px 'IBM Plex Sans',Helvetica,Arial,sans-serif;border:1px solid #bdbdbd;background:#ffffff;color:#333333;white-space:nowrap}
+    .wf-btn-p{background:#111111;border-color:transparent;color:#fff}
+    .wf-row{display:flex;gap:12px;align-items:center}
+    .wf-note{font:400 11px/1.4 'IBM Plex Sans',Helvetica,Arial,sans-serif;color:#767676;border-left:2px solid #c9c9c9;padding-left:8px}
+    .wf-k{font:600 9px 'IBM Plex Sans',Helvetica,Arial,sans-serif;letter-spacing:.1em;text-transform:uppercase;color:#8a8a8a;margin:0}
+    .wf-dot{width:20px;height:20px;border-radius:50%;border:1px solid #9e9e9e;flex:none}
+    .wf-step{font:500 11px/1.3 'IBM Plex Sans',Helvetica,Arial,sans-serif;color:#8a8a8a;display:flex;gap:9px;align-items:center}
+    .wf-step-on{color:#111111;font-weight:700}
+    .wf-pip{width:8px;height:8px;border-radius:50%;background:#d0d0d0;flex:none}
+    .wf-pip-on{background:#111111}
+    .wf-cols{display:flex;gap:20px;align-items:flex-start}
+    .screen-frame .wf{box-shadow:0 2px 14px rgba(0,0,0,.12)}
+
+
+    .lightbox { display: none; position: fixed; inset: 0; background: rgba(17,17,17,0.72); z-index: 1000; align-items: flex-start; justify-content: center; padding: 40px 24px; overflow: auto; }
+    .lightbox.is-open { display: flex; }
+    .lightbox__close { position: fixed; top: 18px; right: 24px; background: #fff; border: 1px solid #bdbdbd; color: #0e0c0c; font-size: 14px; font-weight: 700; padding: 6px 12px; cursor: pointer; letter-spacing: 1px; }
+
+    .case-footer { width: 100%; height: 120px; display: flex; align-items: center; justify-content: center; background: #f7f7f7; }
+    .btn-home { display: inline-flex; align-items: center; justify-content: center; height: 56px; padding: 0 32px; border-radius: 50px; background: #fe204a; color: #fff !important; font-size: 15px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; transition: background .3s ease, transform .3s ease; }
+    .btn-home:hover { background: #b5012f; transform: scale(1.05); }
+
+    .site-nav { position: sticky; top: 0; z-index: 100; width: 100%; height: 72px; display: flex; align-items: center; justify-content: space-between; padding: 0 40px; background: #fff; border-bottom: 1px solid #e8e8e8; }
+    .nav-logo { font-weight: 700; font-size: 15px; color: #0e0c0c; letter-spacing: 1px; }
+    .nav-links { display: flex; align-items: center; gap: 32px; }
+    .nav-link { font-weight: 700; font-size: 13px; letter-spacing: 2px; text-transform: uppercase; color: #0e0c0c; transition: color .2s ease; }
+    .nav-link:hover { color: #087274; }
+    .nav-hamburger { display: none; flex-direction: column; justify-content: center; gap: 5px; background: none; border: none; cursor: pointer; padding: 4px; }
+    .nav-hamburger span { display: block; width: 24px; height: 2px; background: #0e0c0c; border-radius: 2px; transition: all .25s ease; }
+    .nav-hamburger.is-open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .nav-hamburger.is-open span:nth-child(2) { opacity: 0; }
+    .nav-hamburger.is-open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+    @media (max-width: 900px) {
+      .screen-row { flex-direction: column; gap: 18px; padding: 28px 32px; }
+      .screen-copy { width: 100%; }
+      .screen-frame { width: 100%; padding: 16px; }
+      .screen-frame__wrap { --wf-scale: 0.46; }
+      .flow-band { padding: 36px 32px 4px; }
+      .section-full { padding: 44px 32px; }
+      .case-hero { padding: 44px 32px; }
+    }
+    @media (max-width: 640px) {
+      .nav-hamburger { display: flex; }
+      .nav-links { display: none; flex-direction: column; align-items: flex-start; gap: 0; position: absolute; top: 72px; left: 0; right: 0; background: #fff; border-bottom: 1px solid #e8e8e8; padding: 16px 40px 24px; z-index: 99; }
+      .nav-links.is-open { display: flex; }
+      .nav-link { padding: 12px 0; font-size: 14px; width: 100%; border-bottom: 1px solid #f0f0f0; }
+      .nav-link:last-child { border-bottom: none; }
+      .screen-frame__wrap { --wf-scale: 0.34; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+
+    <nav class="site-nav">
+      <a href="../index.html#portfolio" class="nav-logo">← Back</a>
+      <button class="nav-hamburger" id="nav-hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+      <div class="nav-links" id="nav-links">
+        <a href="../index.html#portfolio" class="nav-link">UX Case Studies</a>
+        <a href="writing.html" class="nav-link">UX Writing</a>
+        <a href="personal-work.html" class="nav-link">Explorations</a>
+        <a href="about-me.html" class="nav-link">About Me</a>
+      </div>
+    </nav>
+
+    <div class="case-hero">
+      <div class="case-hero__eyebrow">Concept</div>
+      <h1 class="case-hero__title">HSA Investing</h1>
+      <p class="case-hero__sub">An HSA that invests the money above your cash cushion, and refills the cushion when it runs low, without asking you to manage it.</p>
+    </div>
+
+    <div class="section-full">
+      <h2 class="section-label">Overview</h2>
+      <p class="section-body">A Health Savings Account is the most tax-advantaged account most people will ever hold (contributions, growth, and qualified withdrawals are all untaxed), yet most of the money in these accounts sits in cash. The reason isn't apathy. It's that "invest your HSA" tools ask the account holder to do a job they never signed up for: predict this year's medical spending, keep enough liquid to cover it, move the rest into funds, and unwind that position every time a claim hits.</p>
+      <p class="section-body">This concept removes that job. During a one-time setup the member draws a single line: the cash cushion they want to keep spendable. From then on the account runs itself: money above the line is swept into the member's chosen funds, and anything that pulls the balance below the line is sold back to restore it, following rules the member set once. The interface interrupts for exactly one event: spending more than the cushion holds.</p>
+
+      <div class="section-sublabel">The problem</div>
+      <p class="section-body">Two hard things are tangled together. Investing well is one problem; forecasting irregular medical costs is another. Existing HSA investing features hand the member both at once and offer a brokerage screen as the answer. So the safe move is to leave everything in cash, and years of tax-free compounding are quietly lost to inflation.</p>
+
+      <div class="section-sublabel">The insight</div>
+      <p class="section-body">There is only one number the member actually has an opinion about: how much cash they want within reach. Every other decision (when to invest, how much, what to sell when a bill lands) can be derived from that number plus a few rules captured up front. Design the account around the cushion line and the rest becomes bookkeeping the system can do silently.</p>
+
+      <div class="section-sublabel">The approach</div>
+      <p class="section-body">The flow is built as one setup and three engines:</p>
+      <ul class="copy-list">
+        <li><strong>Setup</strong> is strictly linear: seven short steps, a progress rail that never disappears, and nothing goes live until a final review screen. The cash target is pre-seeded from the member's own claim history, so the default is already close to right.</li>
+        <li><strong>Invest the surplus</strong> runs on every contribution. Cash above the line is invested at the member's mix; they see a receipt, never a prompt.</li>
+        <li><strong>Replenish the cushion</strong> runs after a claim or a market dip drops cash below the line. The account sells per the member's sell order and states plainly what happened and why.</li>
+        <li><strong>Spend past the cushion</strong> is the one flow that stops the member. A payment larger than spendable cash opens a single screen with three ways out (sell just the gap, raise the target, or cancel), with the gentlest option preselected.</li>
+      </ul>
+
+      <div class="section-sublabel">Principles that run through every screen</div>
+      <ul class="copy-list">
+        <li><strong>Set decisions once.</strong> Anything that can be a standing rule is captured at setup, not re-asked later.</li>
+        <li><strong>Automate the routine; interrupt only for the exceptional.</strong> Sweeps and replenishments are logged, not confirmed.</li>
+        <li><strong>Say what the system did, and why.</strong> Every automatic sale names its cause, whether a claim or a price move, in plain language.</li>
+        <li><strong>The cushion line is always on screen.</strong> The member can see where they stand against their target from any account view.</li>
+      </ul>
+
+      <div class="section-sublabel">My role</div>
+      <p class="section-body">Concept design: problem framing, flow architecture, and the wireframes shown here. <em>[Adjust for your actual role and team, whether this was an internal concept or a personal exploration, and where it went next.]</em></p>
+    </div>
+
+    <div class="section-full section-full--gray">
+      <h2 class="section-label">How to read this</h2>
+      <p class="section-body">Every screen in the concept is below, in the order a member meets it, grouped into four flows. Each screen has the intent on the left and the wireframe on the right. Click any wireframe to see it full size.</p>
+    </div>
+
+    <div class="flow-band">
+      <div class="flow-band__letter">A</div>
+      <div>
+        <h2 class="flow-band__title">One-time setup: seven steps, then the account is live</h2>
+        <p class="flow-band__intro">Setup is strictly linear: left to right, no branches until the member confirms. The rail is always visible and nothing goes live until the final screen.</p>
+      </div>
+    </div>
+    <div class="screen-row" id="s2a">
+      <div class="screen-copy">
+        <div class="screen-copy__eyebrow">2A &middot; Log in: before setup</div>
+        <h3 class="screen-copy__title">Familiar front door</h3>
+        <p class="screen-copy__body">The flow starts on the bank&#x27;s normal sign-in. Nothing here mentions HSAs or investing; the goal is to keep the entry point identical to what members already know so the new capability doesn&#x27;t raise the stakes of logging in.</p>
+        <p class="screen-copy__note">Entry point only; nothing HSA-specific yet.</p>
+      </div>
+      <div class="screen-frame" role="button" tabindex="0" aria-label="Enlarge 2A">
+        <div class="screen-frame__wrap">
+          <div class="screen-frame__inner">
+            <div class="wf"><div class="wf-chrome"><span class="wf-tl"></span><span class="wf-tl"></span><span class="wf-tl"></span><span class="wf-url"></span></div>
+<div class="wf-body"><div class="wf-main" style="align-items:center;justify-content:center;gap:18px">
+<div style="width:46px;height:46px;border-radius:2px;background:#d6d6d6"></div>
+<h3 class="wf-h">Sign in</h3>
+<div style="width:320px;display:flex;flex-direction:column;gap:12px">
+<div class="wf-field">Username</div><div class="wf-field">Password</div>
+<div class="wf-btn wf-btn-p">Sign in</div>
+</div>
+<p class="wf-note">Entry point only · nothing HSA-specific yet.</p>
+</div></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="screen-row" id="s2b">
+      <div class="screen-copy">
+        <div class="screen-copy__eyebrow">2B &middot; Step 1: Open HSA account</div>
+        <h3 class="screen-copy__title">Step 1: Open the HSA</h3>
+        <p class="screen-copy__body">A seven-step setup rail runs down the left edge and never disappears, so members always know how far they are from done.</p><p class="screen-copy__body">This first step just confirms eligibility and the payroll contribution already on file. Two minutes, no decisions that can be gotten wrong.</p>
+        <p class="screen-copy__note">The progress rail is the spine of the whole setup.</p>
+      </div>
+      <div class="screen-frame" role="button" tabindex="0" aria-label="Enlarge 2B">
+        <div class="screen-frame__wrap">
+          <div class="screen-frame__inner">
+            <div class="wf"><div class="wf-chrome"><span class="wf-tl"></span><span class="wf-tl"></span><span class="wf-tl"></span><span class="wf-url"></span></div>
+<div class="wf-nav"><span class="wf-brand"></span><span>Accounts</span><span>Open new</span><span>Support</span></div>
+<div class="wf-body"><div class="wf-rail">
+<p class="wf-k">Setup</p>
+<div class="wf-step wf-step-on"><span class="wf-pip wf-pip-on"></span>1 · Open HSA</div>
+<div class="wf-step"><span class="wf-pip"></span>2 · Start investing</div>
+<div class="wf-step"><span class="wf-pip"></span>3 · Investing style</div>
+<div class="wf-step"><span class="wf-pip"></span>4 · Cash target</div>
+<div class="wf-step"><span class="wf-pip"></span>5 · Funds</div>
+<div class="wf-step"><span class="wf-pip"></span>6 · Replenish rules</div>
+<div class="wf-step"><span class="wf-pip"></span>7 · Review</div>
+</div>
+<div class="wf-main">
+<p class="wf-k">Open an account</p>
+<h3 class="wf-h">Health Savings Account</h3>
+<p class="wf-p">Confirm eligibility and your plan details. Takes about two minutes.</p>
+<div class="wf-cols">
+  <div class="wf-box" style="flex:1"><div class="wf-row"><span class="wf-dot"></span><div class="wf-line" style="flex:1"></div></div><div class="wf-row"><span class="wf-dot"></span><div class="wf-line" style="flex:1"></div></div><div class="wf-row"><span class="wf-dot"></span><div class="wf-line" style="width:60%"></div></div></div>
+  <div class="wf-box" style="width:200px"><p class="wf-k">Contribution</p><div class="wf-field">$200 / mo · payroll</div></div>
+</div>
+<div style="flex:1"></div>
+<div class="wf-row"><div class="wf-btn wf-btn-p">Open account</div><div class="wf-btn">Cancel</div></div>
+</div></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="screen-row" id="s2c">
+      <div class="screen-copy">
+        <div class="screen-copy__eyebrow">2C &middot; Step 2: Start investing</div>
+        <h3 class="screen-copy__title">Step 2: The pitch, in one diagram</h3>
+        <p class="screen-copy__body">Investing is optional and framed around a single idea: keep a cash cushion for this year&#x27;s medical costs, put everything above it to work for later.</p><p class="screen-copy__body">The two-part cash / invested diagram carries the entire argument, with no paragraphs of investing theory.</p>
+        <p class="screen-copy__note">The two-part diagram is the whole pitch on this page.</p>
+      </div>
+      <div class="screen-frame" role="button" tabindex="0" aria-label="Enlarge 2C">
+        <div class="screen-frame__wrap">
+          <div class="screen-frame__inner">
+            <div class="wf"><div class="wf-chrome"><span class="wf-tl"></span><span class="wf-tl"></span><span class="wf-tl"></span><span class="wf-url"></span></div>
+<div class="wf-nav"><span class="wf-brand"></span><span>HSA</span><span>Invest</span><span>Activity</span></div>
+<div class="wf-body"><div class="wf-main">
+<div class="wf-cols">
+<div style="flex:1;display:flex;flex-direction:column;gap:14px">
+<p class="wf-k">Optional</p>
+<h3 class="wf-h">Put the surplus to work</h3>
+<p class="wf-p">Keep a cash cushion for this year's costs. Everything above it can be invested for later.</p>
+<div class="wf-row"><div class="wf-btn wf-btn-p">Start investing</div><div class="wf-btn">Not now</div></div>
+</div>
+<div class="wf-box" style="width:290px;gap:14px">
+  <div style="height:38px;border-radius:2px;overflow:hidden;display:flex"><div style="width: 34%; background-color: #000000"></div><div style="flex:1;background:#ececec"></div></div>
+  <div class="wf-row" style="justify-content:space-between"><p class="wf-p">Cash · this year</p><p class="wf-p">Invested · later</p></div>
+</div>
+</div>
+<div style="flex:1"></div>
+<p class="wf-note">The two-part diagram is the whole pitch on this page.</p>
+</div></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="screen-row" id="s2d">
+      <div class="screen-copy">
+        <div class="screen-copy__eyebrow">2D &middot; Step 3: Choose self-directed</div>
+        <h3 class="screen-copy__title">Step 3: Pick a style</h3>
+        <p class="screen-copy__body">Two paths: self-directed, where the member sets the funds and rules, or a single managed target-date fund.</p><p class="screen-copy__body">The next four steps assume self-directed. Members who pick “managed for me” skip straight to review.</p>
+        <p class="screen-copy__note">Self-directed is the path the next four steps assume.</p>
+      </div>
+      <div class="screen-frame" role="button" tabindex="0" aria-label="Enlarge 2D">
+        <div class="screen-frame__wrap">
+          <div class="screen-frame__inner">
+            <div class="wf"><div class="wf-chrome"><span class="wf-tl"></span><span class="wf-tl"></span><span class="wf-tl"></span><span class="wf-url"></span></div>
+<div class="wf-nav"><span class="wf-brand"></span><span>HSA</span><span>Invest</span><span>Activity</span></div>
+<div class="wf-body"><div class="wf-rail">
+<p class="wf-k">Setup</p>
+<div class="wf-step"><span class="wf-pip wf-pip-on"></span>1 · Open HSA</div>
+<div class="wf-step"><span class="wf-pip wf-pip-on"></span>2 · Start investing</div>
+<div class="wf-step wf-step-on"><span class="wf-pip wf-pip-on"></span>3 · Investing style</div>
+<div class="wf-step"><span class="wf-pip"></span>4 · Cash target</div>
+<div class="wf-step"><span class="wf-pip"></span>5 · Funds</div>
+<div class="wf-step"><span class="wf-pip"></span>6 · Replenish rules</div>
+<div class="wf-step"><span class="wf-pip"></span>7 · Review</div>
+</div>
+<div class="wf-main">
+<h3 class="wf-h">How do you want to invest?</h3>
+<div class="wf-cols">
+<div class="wf-box" style="flex:1;border-color:#111111;border-width:2px"><div class="wf-row"><span class="wf-dot" style="border-color:#111111;border-width:6px"></span><p style="font:700 14px 'IBM Plex Sans',Helvetica,Arial,sans-serif;color:#111111;margin:0">Self-directed</p></div><p class="wf-p">You pick the funds and the rules.</p></div>
+<div class="wf-box" style="flex:1"><div class="wf-row"><span class="wf-dot"></span><p style="font:700 14px 'IBM Plex Sans',Helvetica,Arial,sans-serif;color:#111111;margin:0">Managed for me</p></div><p class="wf-p">A single target-date fund, chosen for you.</p></div>
+</div>
+<p class="wf-note">Self-directed is the path the next four steps assume.</p>
+<div style="flex:1"></div>
+<div class="wf-row"><div class="wf-btn wf-btn-p">Continue</div><div class="wf-btn">Back</div></div>
+</div></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="screen-row" id="s2e">
+      <div class="screen-copy">
+        <div class="screen-copy__eyebrow">2E &middot; Step 4: Set cash target</div>
+        <h3 class="screen-copy__title">Step 4: Draw the line</h3>
+        <p class="screen-copy__body">The cash target is the number everything else keys off. The member drags a slider or types an amount.</p><p class="screen-copy__body">It&#x27;s pre-seeded from their own history, the average of their claims over the last twelve months, so the default is already close to right.</p>
+        <p class="screen-copy__note">The suggested target is computed from the member&#x27;s real claim history.</p>
+      </div>
+      <div class="screen-frame" role="button" tabindex="0" aria-label="Enlarge 2E">
+        <div class="screen-frame__wrap">
+          <div class="screen-frame__inner">
+            <div class="wf" style="border-color:#111111"><div class="wf-chrome" style="background:#e0e0e0"><span class="wf-tl"></span><span class="wf-tl"></span><span class="wf-tl"></span><span class="wf-url"></span></div>
+<div class="wf-nav"><span class="wf-brand"></span><span>HSA</span><span>Invest</span><span>Activity</span></div>
+<div class="wf-body"><div class="wf-rail">
+<p class="wf-k">Setup</p>
+<div class="wf-step"><span class="wf-pip wf-pip-on"></span>2 · Start investing</div>
+<div class="wf-step"><span class="wf-pip wf-pip-on"></span>3 · Investing style</div>
+<div class="wf-step wf-step-on"><span class="wf-pip wf-pip-on"></span>4 · Cash target</div>
+<div class="wf-step"><span class="wf-pip"></span>5 · Funds</div>
+<div class="wf-step"><span class="wf-pip"></span>6 · Replenish rules</div>
+<div class="wf-step"><span class="wf-pip"></span>7 · Review</div>
+</div>
+<div class="wf-main">
+<p class="wf-k">The line</p>
+<h3 class="wf-h">How much cash do you want to keep spendable?</h3>
+<div class="wf-cols">
+<div style="flex:1;display:flex;flex-direction:column;gap:16px">
+  <p style="font:700 44px/1 'IBM Plex Sans',Helvetica,Arial,sans-serif;color:#111111;margin:0">$1,000</p>
+  <div style="height:6px;border-radius:2px;background:#dadada;position:relative"><div style="position:absolute;left:0;top:0;bottom:0;width:42%;border-radius:2px;background:#111111"></div><div style="position:absolute;left:42%;top:-8px;width:22px;height:22px;border-radius:2px;background:#fff;border:2px solid #111111"></div></div>
+  <p class="wf-p">Drag, or type an amount.</p>
+</div>
+<div class="wf-box" style="width:270px"><p class="wf-k">Seeded from your history</p><p class="wf-p">Your claims over the last 12 months averaged $940. Suggested target: $1,000.</p><div class="wf-line" style="width:80%"></div><div class="wf-line" style="width:64%"></div></div>
+</div>
+<div style="flex:1"></div>
+<div class="wf-row"><div class="wf-btn wf-btn-p">Set target</div><div class="wf-btn">Back</div></div>
+</div></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="screen-row" id="s2f">
+      <div class="screen-copy">
+        <div class="screen-copy__eyebrow">2F &middot; Step 5: Choose funds</div>
+        <h3 class="screen-copy__title">Step 5: Choose the funds</h3>
+        <p class="screen-copy__body">One tap accepts a target-date fund at 100%, or the member builds a custom mix.</p><p class="screen-copy__body">A custom mix can&#x27;t be submitted until the allocations total exactly 100%; the form blocks rather than rounds.</p>
+        <p class="screen-copy__note">Blocks until it totals exactly 100%.</p>
+      </div>
+      <div class="screen-frame" role="button" tabindex="0" aria-label="Enlarge 2F">
+        <div class="screen-frame__wrap">
+          <div class="screen-frame__inner">
+            <div class="wf" style="border-color:#111111"><div class="wf-chrome" style="background:#e0e0e0"><span class="wf-tl"></span><span class="wf-tl"></span><span class="wf-tl"></span><span class="wf-url"></span></div>
+<div class="wf-nav"><span class="wf-brand"></span><span>HSA</span><span>Invest</span><span>Activity</span></div>
+<div class="wf-body"><div class="wf-rail">
+<p class="wf-k">Setup</p>
+<div class="wf-step"><span class="wf-pip wf-pip-on"></span>3 · Investing style</div>
+<div class="wf-step"><span class="wf-pip wf-pip-on"></span>4 · Cash target</div>
+<div class="wf-step wf-step-on"><span class="wf-pip wf-pip-on"></span>5 · Funds</div>
+<div class="wf-step"><span class="wf-pip"></span>6 · Replenish rules</div>
+<div class="wf-step"><span class="wf-pip"></span>7 · Review</div>
+</div>
+<div class="wf-main">
+<h3 class="wf-h">Where should the surplus go?</h3>
+<div class="wf-box" style="border-color:#111111;flex-direction:row;align-items:center;justify-content:space-between"><p style="font:700 14px 'IBM Plex Sans',Helvetica,Arial,sans-serif;color:#111111;margin:0">Target-date 2050</p><p class="wf-p">one tap · 100%</p><div class="wf-btn">Use this</div></div>
+<p class="wf-k">Or build your own</p>
+<div class="wf-box" style="gap:13px">
+  <div class="wf-row"><div class="wf-line" style="flex:1"></div><div class="wf-field" style="padding:5px 14px">40%</div></div>
+  <div class="wf-row"><div class="wf-line" style="flex:1"></div><div class="wf-field" style="padding:5px 14px">40%</div></div>
+  <div class="wf-row"><div class="wf-line" style="flex:1"></div><div class="wf-field" style="padding:5px 14px">20%</div></div>
+</div>
+<div class="wf-row" style="justify-content:space-between"><p class="wf-p">Total allocated</p><p style="font:700 13px 'IBM Plex Sans',Helvetica,Arial,sans-serif;color:#111111;margin:0">100%</p></div>
+<div style="flex:1"></div>
+<div class="wf-row"><div class="wf-btn wf-btn-p">Continue</div><p class="wf-note">Blocks until it totals exactly 100%.</p></div>
+</div></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="screen-row" id="s2g">
+      <div class="screen-copy">
+        <div class="screen-copy__eyebrow">2G &middot; Step 6: Replenish rules</div>
+        <h3 class="screen-copy__title">Step 6: Set the replenish rules once</h3>
+        <p class="screen-copy__body">When cash later drops below the line, the account sells to refill it. The member sets the sell order and whether a sale covers just the shortfall or restores the full cushion, once, here.</p><p class="screen-copy__body">Every automated sale afterward follows these rules without asking again.</p>
+        <p class="screen-copy__note">Set once. Every later sale follows these rules.</p>
+      </div>
+      <div class="screen-frame" role="button" tabindex="0" aria-label="Enlarge 2G">
+        <div class="screen-frame__wrap">
+          <div class="screen-frame__inner">
+            <div class="wf" style="border-color:#111111"><div class="wf-chrome" style="background:#e0e0e0"><span class="wf-tl"></span><span class="wf-tl"></span><span class="wf-tl"></span><span class="wf-url"></span></div>
+<div class="wf-nav"><span class="wf-brand"></span><span>HSA</span><span>Invest</span><span>Activity</span></div>
+<div class="wf-body"><div class="wf-rail">
+<p class="wf-k">Setup</p>
+<div class="wf-step"><span class="wf-pip wf-pip-on"></span>4 · Cash target</div>
+<div class="wf-step"><span class="wf-pip wf-pip-on"></span>5 · Funds</div>
+<div class="wf-step wf-step-on"><span class="wf-pip wf-pip-on"></span>6 · Replenish rules</div>
+<div class="wf-step"><span class="wf-pip"></span>7 · Review</div>
+</div>
+<div class="wf-main">
+<h3 class="wf-h">If cash drops below the line</h3>
+<p class="wf-p">Set once. Every later sale follows these rules.</p>
+<div class="wf-cols">
+<div style="flex:1;display:flex;flex-direction:column;gap:10px">
+<p class="wf-k">Sell in this order</p>
+<div class="wf-box" style="gap:12px">
+  <div class="wf-row"><span style="font:700 11px 'IBM Plex Sans',Helvetica,Arial,sans-serif;color:#8a8a8a">1</span><div class="wf-line" style="flex:1"></div><span style="color:#a8a8a8">⠿</span></div>
+  <div class="wf-row"><span style="font:700 11px 'IBM Plex Sans',Helvetica,Arial,sans-serif;color:#8a8a8a">2</span><div class="wf-line" style="flex:1"></div><span style="color:#a8a8a8">⠿</span></div>
+  <div class="wf-row"><span style="font:700 11px 'IBM Plex Sans',Helvetica,Arial,sans-serif;color:#8a8a8a">3</span><div class="wf-line" style="flex:1"></div><span style="color:#a8a8a8">⠿</span></div>
+</div>
+</div>
+<div style="width:280px;display:flex;flex-direction:column;gap:10px">
+<p class="wf-k">How much to sell</p>
+<div style="display:flex;border:1px solid #bdbdbd;border-radius:2px;overflow:hidden">
+  <div style="flex:1;padding:9px;text-align:center;font:600 11px 'IBM Plex Sans',Helvetica,Arial,sans-serif;background:#111111;color:#fff">Back to target</div>
+  <div style="flex:1;padding:9px;text-align:center;font:600 11px 'IBM Plex Sans',Helvetica,Arial,sans-serif;color:#666666">Cover shortfall only</div>
+</div>
+<p class="wf-p">"Back to target" refills the full cushion. "Cover shortfall" sells only what a charge needed.</p>
+</div>
+</div>
+<div style="flex:1"></div>
+<div class="wf-row"><div class="wf-btn wf-btn-p">Continue</div><div class="wf-btn">Back</div></div>
+</div></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="screen-row" id="s2h">
+      <div class="screen-copy">
+        <div class="screen-copy__eyebrow">2H &middot; Step 7: Review &amp; confirm</div>
+        <h3 class="screen-copy__title">Step 7: Review and turn on</h3>
+        <p class="screen-copy__body">A single screen restates every choice (cash target, cadence, contribution, fund mix, sell order) with an edit link on each.</p><p class="screen-copy__body">Confirming here is the only moment the member flips the feature on. Everything after this is automatic.</p>
+        <p class="screen-copy__note">Nothing is live until this screen is confirmed.</p>
+      </div>
+      <div class="screen-frame" role="button" tabindex="0" aria-label="Enlarge 2H">
+        <div class="screen-frame__wrap">
+          <div class="screen-frame__inner">
+            <div class="wf"><div class="wf-chrome"><span class="wf-tl"></span><span class="wf-tl"></span><span class="wf-tl"></span><span class="wf-url"></span></div>
+<div class="wf-nav"><span class="wf-brand"></span><span>HSA</span><span>Invest</span><span>Activity</span></div>
+<div class="wf-body"><div class="wf-main">
+<h3 class="wf-h">Review your setup</h3>
+<div class="wf-cols">
+<div class="wf-box" style="flex:1;gap:14px">
+  <div class="wf-row" style="justify-content:space-between"><p class="wf-p">Cash target</p><p style="font:700 13px 'IBM Plex Sans',Helvetica,Arial,sans-serif;margin:0">$1,000</p></div>
+  <div class="wf-row" style="justify-content:space-between"><p class="wf-p">Sweep cadence</p><p style="font:700 13px 'IBM Plex Sans',Helvetica,Arial,sans-serif;margin:0">Daily</p></div>
+  <div class="wf-row" style="justify-content:space-between"><p class="wf-p">Monthly contribution</p><p style="font:700 13px 'IBM Plex Sans',Helvetica,Arial,sans-serif;margin:0">$200 payroll</p></div>
+</div>
+<div class="wf-box" style="flex:1;gap:14px">
+  <div class="wf-row" style="justify-content:space-between"><p class="wf-p">Fund mix</p><p style="font:700 13px 'IBM Plex Sans',Helvetica,Arial,sans-serif;margin:0">3 funds · 100%</p></div>
+  <div class="wf-row" style="justify-content:space-between"><p class="wf-p">Sell order</p><p style="font:700 13px 'IBM Plex Sans',Helvetica,Arial,sans-serif;margin:0">Set</p></div>
+  <div class="wf-row" style="justify-content:space-between"><p class="wf-p">Replenish</p><p style="font:700 13px 'IBM Plex Sans',Helvetica,Arial,sans-serif;margin:0">Back to target</p></div>
+</div>
+</div>
+<p class="wf-p">You can change any of this later. Changes apply to future sweeps and sales.</p>
+<div style="flex:1"></div>
+<div class="wf-row"><div class="wf-btn wf-btn-p">Confirm and turn on</div><div class="wf-btn">Edit</div></div>
+</div></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="flow-band">
+      <div class="flow-band__letter">B</div>
+      <div>
+        <h2 class="flow-band__title">Invest the surplus: invisible by design</h2>
+        <p class="flow-band__intro">Once setup is on, contributions that push cash above the target are swept into funds automatically. The member only ever sees a receipt.</p>
+      </div>
+    </div>
+    <div class="screen-row" id="s2i">
+      <div class="screen-copy">
+        <div class="screen-copy__eyebrow">2I &middot; Account home</div>
+        <h3 class="screen-copy__title">Account home</h3>
+        <p class="screen-copy__body">The steady-state view. Total balance splits into cash and invested, and the cash target line is always drawn so the member can see at a glance whether they&#x27;re above or below it.</p><p class="screen-copy__body">Primary actions: pay a bill, adjust the target, edit funds.</p>
+        <p class="screen-copy__note">The line is the target, always visible.</p>
+      </div>
+      <div class="screen-frame" role="button" tabindex="0" aria-label="Enlarge 2I">
+        <div class="screen-frame__wrap">
+          <div class="screen-frame__inner">
+            <div class="wf"><div class="wf-chrome"><span class="wf-tl"></span><span class="wf-tl"></span><span class="wf-tl"></span><span class="wf-url"></span></div>
+<div class="wf-nav"><span class="wf-brand"></span><span>HSA</span><span>Invest</span><span>Activity</span><span>Settings</span></div>
+<div class="wf-body"><div class="wf-main">
+<div class="wf-cols">
+<div style="flex:1;display:flex;flex-direction:column;gap:12px">
+<p class="wf-k">Total balance</p>
+<p style="font:700 34px/1 'IBM Plex Sans',Helvetica,Arial,sans-serif;color:#111111;margin:0">$6,480</p>
+<div style="position:relative;height:44px;border-radius:2px;overflow:hidden;display:flex"><div style="width:22%;background:#d6d6d6"></div><div style="flex:1;background:#ececec"></div><div style="position:absolute;left:22%;top:0;bottom:0;width:2px;background:#111111"></div></div>
+<div class="wf-row" style="justify-content:space-between"><p class="wf-p">Cash $1,000</p><p class="wf-p">Invested $5,480</p></div>
+<p class="wf-note">The line is the target · always visible.</p>
+</div>
+<div class="wf-box" style="width:230px"><p class="wf-k">Recent activity</p><div class="wf-line" style="width:88%"></div><div class="wf-line" style="width:70%"></div><div class="wf-line" style="width:78%"></div><div class="wf-line" style="width:60%"></div></div>
+</div>
+<div style="flex:1"></div>
+<div class="wf-row"><div class="wf-btn wf-btn-p">Pay a bill</div><div class="wf-btn">Adjust target</div><div class="wf-btn">Edit funds</div></div>
+</div></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="screen-row" id="s2j">
+      <div class="screen-copy">
+        <div class="screen-copy__eyebrow">2J &middot; Sweep confirmation</div>
+        <h3 class="screen-copy__title">Sweep confirmation</h3>
+        <p class="screen-copy__body">When a payroll contribution pushes cash above the target, the surplus is invested at the member&#x27;s mix automatically.</p><p class="screen-copy__body">This screen is a receipt, not a prompt; it shows what was bought and that cash is back at the line. There is nothing to approve.</p>
+        <p class="screen-copy__note">Log only. Nothing to decide.</p>
+      </div>
+      <div class="screen-frame" role="button" tabindex="0" aria-label="Enlarge 2J">
+        <div class="screen-frame__wrap">
+          <div class="screen-frame__inner">
+            <div class="wf"><div class="wf-chrome"><span class="wf-tl"></span><span class="wf-tl"></span><span class="wf-tl"></span><span class="wf-url"></span></div>
+<div class="wf-nav"><span class="wf-brand"></span><span>HSA</span><span>Invest</span><span>Activity</span></div>
+<div class="wf-body"><div class="wf-main">
+<div class="wf-box" style="border-color:#111111">
+  <p class="wf-k" style="color:#111111">Swept today</p>
+  <h3 class="wf-h">$200 moved into your funds</h3>
+  <p class="wf-p">Your payroll contribution put cash above your $1,000 target. The surplus was invested at your chosen mix.</p>
+</div>
+<div class="wf-cols">
+<div class="wf-box" style="flex:1"><p class="wf-k">What was bought</p><div class="wf-line" style="width:70%"></div><div class="wf-line" style="width:56%"></div><div class="wf-line" style="width:62%"></div></div>
+<div class="wf-box" style="width:220px"><p class="wf-k">Cash after sweep</p><p style="font:700 22px/1 'IBM Plex Sans',Helvetica,Arial,sans-serif;color:#111111;margin:0">$1,000</p></div>
+</div>
+<div style="flex:1"></div>
+<div class="wf-row"><div class="wf-btn">View transaction</div><p class="wf-note">Log only. Nothing to decide.</p></div>
+</div></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="flow-band">
+      <div class="flow-band__letter">C</div>
+      <div>
+        <h2 class="flow-band__title">Replenish the cushion: runs after the fact</h2>
+        <p class="flow-band__intro">When a claim or a market dip drops cash below the target, the replenish rules sell to restore it and notify the member afterward.</p>
+      </div>
+    </div>
+    <div class="screen-row" id="s2k">
+      <div class="screen-copy">
+        <div class="screen-copy__eyebrow">2K &middot; Auto-sale notice</div>
+        <h3 class="screen-copy__title">Auto-sale notice</h3>
+        <p class="screen-copy__body">If fund values fall enough to drop cash below the target, the rules sell to restore it and the member is told after the fact.</p><p class="screen-copy__body">The copy is blunt about cause and effect: a price move triggered a sale. Hiding that would erode trust the first time someone noticed.</p>
+        <p class="screen-copy__note">A price move can sell you out, so say so plainly.</p>
+      </div>
+      <div class="screen-frame" role="button" tabindex="0" aria-label="Enlarge 2K">
+        <div class="screen-frame__wrap">
+          <div class="screen-frame__inner">
+            <div class="wf" style="border-color:#111111"><div class="wf-chrome" style="background:#e0e0e0"><span class="wf-tl"></span><span class="wf-tl"></span><span class="wf-tl"></span><span class="wf-url"></span></div>
+<div class="wf-nav"><span class="wf-brand"></span><span>HSA</span><span>Invest</span><span>Activity</span></div>
+<div class="wf-body"><div class="wf-main">
+<div class="wf-box" style="border-color:#111111">
+  <p class="wf-k" style="color:#111111">Why this happened</p>
+  <h3 class="wf-h">We sold $180 to refill your cash</h3>
+  <p class="wf-p">Fund values fell, which pushed your cash below the $1,000 target. Your rules restore the cushion in full.</p>
+</div>
+<div class="wf-cols">
+<div class="wf-box" style="flex:1"><p class="wf-k">What sold</p><div class="wf-row" style="justify-content:space-between"><div class="wf-line" style="width:50%"></div><p class="wf-p">$180</p></div><div class="wf-row" style="justify-content:space-between"><p class="wf-p">Tax lot</p><div class="wf-line" style="width:36%"></div></div></div>
+<div class="wf-box" style="width:230px"><p class="wf-k">Cash restored</p><p style="font:700 22px/1 'IBM Plex Sans',Helvetica,Arial,sans-serif;color:#111111;margin:0">$1,000</p></div>
+</div>
+<div style="flex:1"></div>
+<div class="wf-row"><div class="wf-btn">Change replenish rules</div><p class="wf-note">A price move can sell you out · say so plainly.</p></div>
+</div></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="flow-band">
+      <div class="flow-band__letter">D</div>
+      <div>
+        <h2 class="flow-band__title">Spend past the cushion: the one flow that interrupts</h2>
+        <p class="flow-band__intro">The only place the system stops the member: a payment larger than spendable cash. Three resolutions live on one screen.</p>
+      </div>
+    </div>
+    <div class="screen-row" id="s2i-d">
+      <div class="screen-copy">
+        <div class="screen-copy__eyebrow">2I &middot; Account home</div>
+        <h3 class="screen-copy__title">Account home</h3>
+        <p class="screen-copy__body">The steady-state view. Total balance splits into cash and invested, and the cash target line is always drawn so the member can see at a glance whether they&#x27;re above or below it.</p><p class="screen-copy__body">Primary actions: pay a bill, adjust the target, edit funds.</p>
+        <p class="screen-copy__note">The line is the target, always visible.</p>
+      </div>
+      <div class="screen-frame" role="button" tabindex="0" aria-label="Enlarge 2I">
+        <div class="screen-frame__wrap">
+          <div class="screen-frame__inner">
+            <div class="wf"><div class="wf-chrome"><span class="wf-tl"></span><span class="wf-tl"></span><span class="wf-tl"></span><span class="wf-url"></span></div>
+<div class="wf-nav"><span class="wf-brand"></span><span>HSA</span><span>Invest</span><span>Activity</span><span>Settings</span></div>
+<div class="wf-body"><div class="wf-main">
+<div class="wf-cols">
+<div style="flex:1;display:flex;flex-direction:column;gap:12px">
+<p class="wf-k">Total balance</p>
+<p style="font:700 34px/1 'IBM Plex Sans',Helvetica,Arial,sans-serif;color:#111111;margin:0">$6,480</p>
+<div style="position:relative;height:44px;border-radius:2px;overflow:hidden;display:flex"><div style="width:22%;background:#d6d6d6"></div><div style="flex:1;background:#ececec"></div><div style="position:absolute;left:22%;top:0;bottom:0;width:2px;background:#111111"></div></div>
+<div class="wf-row" style="justify-content:space-between"><p class="wf-p">Cash $1,000</p><p class="wf-p">Invested $5,480</p></div>
+<p class="wf-note">The line is the target · always visible.</p>
+</div>
+<div class="wf-box" style="width:230px"><p class="wf-k">Recent activity</p><div class="wf-line" style="width:88%"></div><div class="wf-line" style="width:70%"></div><div class="wf-line" style="width:78%"></div><div class="wf-line" style="width:60%"></div></div>
+</div>
+<div style="flex:1"></div>
+<div class="wf-row"><div class="wf-btn wf-btn-p">Pay a bill</div><div class="wf-btn">Adjust target</div><div class="wf-btn">Edit funds</div></div>
+</div></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="screen-row" id="s2l">
+      <div class="screen-copy">
+        <div class="screen-copy__eyebrow">2L &middot; Pre-spend warning</div>
+        <h3 class="screen-copy__title">Pre-spend warning</h3>
+        <p class="screen-copy__body">The one flow that interrupts. When a bill is larger than spendable cash, the member is stopped and given three ways forward on a single screen: sell only the gap, raise the target, or cancel.</p><p class="screen-copy__body">“Sell only the gap” is the default because it&#x27;s the gentlest; it changes nothing about the member&#x27;s setup.</p>
+        <p class="screen-copy__note">Three ways out, one screen. Gentlest option is the default.</p>
+      </div>
+      <div class="screen-frame" role="button" tabindex="0" aria-label="Enlarge 2L">
+        <div class="screen-frame__wrap">
+          <div class="screen-frame__inner">
+            <div class="wf" style="border-color:#111111"><div class="wf-chrome" style="background:#e0e0e0"><span class="wf-tl"></span><span class="wf-tl"></span><span class="wf-tl"></span><span class="wf-url"></span></div>
+<div class="wf-nav"><span class="wf-brand"></span><span>HSA</span><span>Pay a bill</span></div>
+<div class="wf-body"><div class="wf-main">
+<p class="wf-k" style="color:#111111">This is more than your spendable cash</p>
+<h3 class="wf-h">$420 charge · $180 available</h3>
+<div class="wf-cols">
+<div style="flex:1;display:flex;flex-direction:column;gap:12px">
+<p class="wf-k">How do you want to cover it?</p>
+<div class="wf-btn wf-btn-p">Sell only the gap · $240</div>
+<div class="wf-btn">Raise my cash target</div>
+<div class="wf-btn">Cancel the payment</div>
+</div>
+<div class="wf-box" style="width:250px"><p class="wf-k">Shortfall</p><p style="font:700 30px/1 'IBM Plex Sans',Helvetica,Arial,sans-serif;color:#111111;margin:0">$240</p><p class="wf-p">Selling the gap leaves your target unchanged.</p></div>
+</div>
+<div style="flex:1"></div>
+<p class="wf-note">Gentlest option is the default. Three ways out, one screen.</p>
+</div></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="screen-row" id="s2m">
+      <div class="screen-copy">
+        <div class="screen-copy__eyebrow">2M &middot; Sale confirmed, payment clears</div>
+        <h3 class="screen-copy__title">Sale confirmed, payment clears</h3>
+        <p class="screen-copy__body">After the member chooses to sell the gap, the confirmation shows exactly what was liquidated, following their sell order, and that nothing extra was sold.</p><p class="screen-copy__body">Cash lands at zero, the next sweep date is shown, and a receipt is available.</p>
+        <p class="screen-copy__note">Shows the sale followed the member&#x27;s sell order, nothing extra.</p>
+      </div>
+      <div class="screen-frame" role="button" tabindex="0" aria-label="Enlarge 2M">
+        <div class="screen-frame__wrap">
+          <div class="screen-frame__inner">
+            <div class="wf"><div class="wf-chrome"><span class="wf-tl"></span><span class="wf-tl"></span><span class="wf-tl"></span><span class="wf-url"></span></div>
+<div class="wf-nav"><span class="wf-brand"></span><span>HSA</span><span>Pay a bill</span></div>
+<div class="wf-body"><div class="wf-main">
+<div class="wf-row"><div style="width:40px;height:40px;border-radius:2px;background:#d6d6d6"></div><h3 class="wf-h">Payment sent · $420</h3></div>
+<p class="wf-p">We sold $240 from your funds following your sell order. Nothing extra was liquidated.</p>
+<div class="wf-cols">
+<div class="wf-box" style="flex:1;gap:14px">
+  <div class="wf-row" style="justify-content:space-between"><p class="wf-p">Sold</p><p style="font:700 13px 'IBM Plex Sans',Helvetica,Arial,sans-serif;margin:0">$240</p></div>
+  <div class="wf-row" style="justify-content:space-between"><p class="wf-p">Cash now</p><p style="font:700 13px 'IBM Plex Sans',Helvetica,Arial,sans-serif;margin:0">$0</p></div>
+  <div class="wf-row" style="justify-content:space-between"><p class="wf-p">Next sweep</p><p style="font:700 13px 'IBM Plex Sans',Helvetica,Arial,sans-serif;margin:0">Tomorrow</p></div>
+</div>
+<div class="wf-box" style="width:230px"><p class="wf-k">Receipt</p><div class="wf-line" style="width:80%"></div><div class="wf-line" style="width:62%"></div></div>
+</div>
+<div style="flex:1"></div>
+<div class="wf-row"><div class="wf-btn wf-btn-p">Done</div><div class="wf-btn">Download receipt</div></div>
+</div></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="screen-row" id="s2n">
+      <div class="screen-copy">
+        <div class="screen-copy__eyebrow">2N &middot; Adjust target (from anywhere)</div>
+        <h3 class="screen-copy__title">Adjust the target from anywhere</h3>
+        <p class="screen-copy__body">The cash target isn&#x27;t locked at setup. The same slider from step 4 is reachable from the account any time.</p><p class="screen-copy__body">Raising it is honest about the consequence: it will sell funds at the next cycle to build the bigger cushion.</p>
+        <p class="screen-copy__note">Same control as step 4, reachable later.</p>
+      </div>
+      <div class="screen-frame" role="button" tabindex="0" aria-label="Enlarge 2N">
+        <div class="screen-frame__wrap">
+          <div class="screen-frame__inner">
+            <div class="wf"><div class="wf-chrome"><span class="wf-tl"></span><span class="wf-tl"></span><span class="wf-tl"></span><span class="wf-url"></span></div>
+<div class="wf-nav"><span class="wf-brand"></span><span>HSA</span><span>Settings</span></div>
+<div class="wf-body"><div class="wf-main">
+<h3 class="wf-h">Target cash balance</h3>
+<div class="wf-cols">
+<div style="flex:1;display:flex;flex-direction:column;gap:16px">
+<div class="wf-row" style="align-items:baseline"><p style="font:700 40px/1 'IBM Plex Sans',Helvetica,Arial,sans-serif;color:#111111;margin:0">$1,250</p><p class="wf-p">was $1,000</p></div>
+<div style="height:6px;border-radius:2px;background:#dadada;position:relative"><div style="position:absolute;left:0;top:0;bottom:0;width:56%;border-radius:2px;background:#111111"></div><div style="position:absolute;left:56%;top:-8px;width:22px;height:22px;border-radius:2px;background:#fff;border:2px solid #111111"></div></div>
+</div>
+<div class="wf-box" style="width:270px"><p class="wf-k">Effect</p><p class="wf-p">Raising the target sells $250 from your funds at the next cycle.</p></div>
+</div>
+<div style="flex:1"></div>
+<div class="wf-row"><div class="wf-btn wf-btn-p">Save target</div><p class="wf-note">Same control as step 4, reachable later.</p></div>
+</div></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-full">
+      <h2 class="section-label">What I'd validate next</h2>
+      <ul class="copy-list">
+        <li><strong>Trust in silent selling.</strong> Will members accept an account that sells positions without asking first? The honesty of the replenish notice is doing a lot of work and needs testing against real reactions.</li>
+        <li><strong>The seeded cash target.</strong> Does a target derived from claim history land close enough that members accept the default, or does it feel arbitrary and get overridden every time?</li>
+        <li><strong>The one interruption.</strong> Does the pre-spend screen read as the system protecting the member, or as being blocked from their own money?</li>
+        <li><strong>Setup length.</strong> Seven steps is a lot. Which steps can be defaulted away entirely for members who choose "managed for me"?</li>
+      </ul>
+    </div>
+
+    <div class="case-footer">
+      <a href="../index.html#portfolio" class="btn-home">← Return Home</a>
+    </div>
+
+  </div>
+
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox__close" id="lightbox-close" aria-label="Close">Close ✕</button>
+    <div class="lightbox__inner" id="lightbox-inner"></div>
+  </div>
+
+  <script>
+    (function () {
+      var btn = document.getElementById('nav-hamburger');
+      var links = document.getElementById('nav-links');
+      if (btn && links) {
+        btn.addEventListener('click', function () { btn.classList.toggle('is-open'); links.classList.toggle('is-open'); });
+        links.querySelectorAll('a').forEach(function (a) { a.addEventListener('click', function () { btn.classList.remove('is-open'); links.classList.remove('is-open'); }); });
+      }
+      var lb = document.getElementById('lightbox');
+      var lbInner = document.getElementById('lightbox-inner');
+      var lbClose = document.getElementById('lightbox-close');
+      function openLb(frame) {
+        var wf = frame.querySelector('.wf, .wfm');
+        if (!wf) return;
+        lbInner.innerHTML = '';
+        lbInner.appendChild(wf.cloneNode(true));
+        lb.classList.add('is-open');
+        document.body.style.overflow = 'hidden';
+      }
+      function closeLb() { lb.classList.remove('is-open'); lbInner.innerHTML = ''; document.body.style.overflow = ''; }
+      document.querySelectorAll('.screen-frame').forEach(function (f) {
+        f.addEventListener('click', function () { openLb(f); });
+        f.addEventListener('keydown', function (e) { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openLb(f); } });
+      });
+      lbClose.addEventListener('click', closeLb);
+      lb.addEventListener('click', function (e) { if (e.target === lb) closeLb(); });
+      document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeLb(); });
+
+      // Reserve the correct vertical space for each transform-scaled wireframe.
+      function sizeFrames() {
+        document.querySelectorAll('.screen-frame__inner').forEach(function (inner) {
+          var wrap = inner.parentElement;
+          var scale = parseFloat(getComputedStyle(wrap).getPropertyValue('--wf-scale')) || 0.62;
+          wrap.style.height = (inner.offsetHeight * scale) + 'px';
+        });
+      }
+      sizeFrames();
+      window.addEventListener('load', sizeFrames);
+      if (document.fonts && document.fonts.ready) { document.fonts.ready.then(sizeFrames); }
+      setTimeout(sizeFrames, 600);
+      setTimeout(sizeFrames, 1800);
+      var rt;
+      window.addEventListener('resize', function () { clearTimeout(rt); rt = setTimeout(sizeFrames, 150); });
+    })();
+  </script>
+</body>
+</html>

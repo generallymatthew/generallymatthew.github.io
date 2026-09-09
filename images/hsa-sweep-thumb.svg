@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" font-family="'Open Sans',Helvetica,Arial,sans-serif">
+  <rect width="480" height="360" fill="#f4f4f2"/>
+  <rect x="40" y="46" width="400" height="268" rx="6" fill="#ffffff" stroke="#d8d8d8"/>
+  <text x="64" y="92" font-size="15" font-weight="700" fill="#0e0c0c">Total balance</text>
+  <text x="64" y="132" font-size="34" font-weight="700" fill="#0e0c0c">$6,480</text>
+  <g>
+    <rect x="64" y="156" width="352" height="34" rx="3" fill="#ececec"/>
+    <rect x="64" y="156" width="78" height="34" rx="3" fill="#9fdedf"/>
+    <rect x="140" y="150" width="3" height="46" fill="#0e0c0c"/>
+  </g>
+  <text x="64" y="216" font-size="12" fill="#666">Cash $1,000</text>
+  <text x="416" y="216" font-size="12" fill="#666" text-anchor="end">Invested $5,480</text>
+  <rect x="64" y="246" width="120" height="34" rx="3" fill="#0e0c0c"/>
+  <text x="124" y="268" font-size="12" font-weight="700" fill="#fff" text-anchor="middle">Pay a bill</text>
+  <rect x="196" y="246" width="120" height="34" rx="3" fill="#fff" stroke="#bdbdbd"/>
+  <text x="256" y="268" font-size="12" fill="#333" text-anchor="middle">Adjust target</text>
+</svg>

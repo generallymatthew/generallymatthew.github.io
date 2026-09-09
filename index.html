@@ -380,6 +380,72 @@
       text-align: center;
     }
 
+    /* ─── Wide feature card (solo project) ───────────────────── */
+    .portfolio-card--wide {
+      width: 100%;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      gap: 56px;
+      text-align: left;
+      min-height: 520px;
+      padding: 64px;
+    }
+
+    .portfolio-card--wide .portfolio-card__thumb {
+      flex: 0 1 420px;
+      width: auto;
+      max-width: 42%;
+      height: auto;
+      max-height: 340px;
+      margin-bottom: 0;
+      object-position: center;
+    }
+
+    .portfolio-card--wide .portfolio-card__wide-body {
+      flex: 0 1 440px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .portfolio-card--wide .portfolio-card__title {
+      text-align: center;
+      font-size: 28px;
+      margin-bottom: 12px;
+    }
+
+    .portfolio-card--wide .portfolio-card__company {
+      text-align: center;
+      margin-top: 0;
+      margin-bottom: 28px;
+      font-size: 16px;
+      line-height: 1.5;
+    }
+
+    .portfolio-card--wide .portfolio-card__skills-label,
+    .portfolio-card--wide .portfolio-card__skills {
+      text-align: center;
+    }
+
+    @media (max-width: 767px) {
+      .portfolio-card--wide {
+        flex-direction: column;
+        gap: 28px;
+        padding: 48px 32px;
+        min-height: 0;
+        text-align: center;
+        align-items: center;
+      }
+      .portfolio-card--wide .portfolio-card__thumb { max-width: 100%; flex-basis: auto; }
+      .portfolio-card--wide .portfolio-card__wide-body { align-items: center; flex-basis: auto; }
+      .portfolio-card--wide .portfolio-card__title,
+      .portfolio-card--wide .portfolio-card__company,
+      .portfolio-card--wide .portfolio-card__skills-label,
+      .portfolio-card--wide .portfolio-card__skills { text-align: center; }
+    }
+
     /* ─── Intro header ──────────────────────────────────────── */
     /* ─── Tile section headers ───────────────────────────────── */
     .tile-section-header {
@@ -806,6 +872,19 @@
         <span class="btn btn--purple" style="margin-bottom:24px;">View Case Study</span>
         <div class="portfolio-card__skills-label">Skills &amp; Expertise</div>
         <div class="portfolio-card__skills">Customer understanding / Consensus building /<br>Leveraging AI potential</div>
+      </a>
+
+      <div class="tile-section-header">Fidelity Work</div>
+
+      <a href="html/hsa-investing-workflow.html" class="portfolio-card portfolio-card--teal portfolio-card--wide">
+        <img class="portfolio-card__thumb" src="images/hsa-sweep-thumb.svg" alt="">
+        <div class="portfolio-card__wide-body">
+          <div class="portfolio-card__title">HSA Investing</div>
+          <div class="portfolio-card__company">An HSA that invests the surplus above your cash cushion, and refills the cushion when it runs low, without asking you to manage it.</div>
+          <span class="btn btn--purple" style="margin-bottom:24px;">View Case Study</span>
+          <div class="portfolio-card__skills-label">Skills &amp; Expertise</div>
+          <div class="portfolio-card__skills">Flow design / Interaction design /<br>Automation with human control</div>
+        </div>
       </a>
 
       <div class="tile-section-header">Republic Wireless Work</div>
