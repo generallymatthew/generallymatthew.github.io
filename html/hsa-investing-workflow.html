@@ -29,10 +29,6 @@
     .section-sublabel:first-of-type { margin-top: 0; }
     .section-body { font-size: 16px; line-height: 28px; color: #0e0c0c; margin-bottom: 14px; max-width: 720px; }
     .section-body:last-child { margin-bottom: 0; }
-    .copy-list { list-style: none; margin: 0 0 14px; max-width: 720px; }
-    .copy-list li { font-size: 16px; line-height: 28px; color: #0e0c0c; padding-left: 22px; margin-bottom: 10px; position: relative; }
-    .copy-list li::before { content: '\2022'; position: absolute; left: 0; color: #087274; font-weight: 700; }
-    .copy-list li strong { font-weight: 700; }
 
     .flow-band { width: 100%; display: flex; gap: 20px; align-items: flex-start; padding: 44px 64px 8px; background: #fff; }
     .flow-band__letter { flex: none; width: 34px; height: 34px; display: flex; align-items: center; justify-content: center; background: #0e0c0c; color: #fff; font-weight: 700; font-size: 14px; border-radius: 2px; }
@@ -42,7 +38,6 @@
     .screen-row { width: 100%; display: flex; gap: 44px; align-items: flex-start; padding: 28px 64px; background: #fff; scroll-margin-top: 88px; }
     .screen-row:nth-of-type(even) { background: #fbfbfb; }
     .screen-copy { flex: none; width: 300px; padding-top: 8px; }
-    .screen-copy__eyebrow { font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: #fe204a; margin-bottom: 10px; line-height: 1.5; }
     .screen-copy__title { font-size: 18px; font-weight: 700; color: #0e0c0c; margin-bottom: 12px; }
     .screen-copy__body { font-size: 14.5px; line-height: 25px; color: #333; margin-bottom: 12px; }
     .screen-copy__note { font-size: 13px; line-height: 21px; color: #767676; font-style: italic; border-left: 2px solid #98e5e6; padding-left: 10px; margin-top: 16px; }
@@ -132,63 +127,32 @@
     </nav>
 
     <div class="case-hero">
-      <div class="case-hero__eyebrow">Concept</div>
+      <div class="case-hero__eyebrow">Fidelity</div>
       <h1 class="case-hero__title">HSA Investing</h1>
-      <p class="case-hero__sub">An HSA that invests the money above your cash cushion, and refills the cushion when it runs low, without asking you to manage it.</p>
+      <p class="case-hero__sub">A self-service investing flow, built to get more HSA holders off the phone and investing their surplus on their own.</p>
     </div>
 
     <div class="section-full">
       <h2 class="section-label">Overview</h2>
-      <p class="section-body">A Health Savings Account is the most tax-advantaged account most people will ever hold (contributions, growth, and qualified withdrawals are all untaxed), yet most of the money in these accounts sits in cash. The reason isn't apathy. It's that "invest your HSA" tools ask the account holder to do a job they never signed up for: predict this year's medical spending, keep enough liquid to cover it, move the rest into funds, and unwind that position every time a claim hits.</p>
-      <p class="section-body">This concept removes that job. During a one-time setup the member draws a single line: the cash cushion they want to keep spendable. From then on the account runs itself: money above the line is swept into the member's chosen funds, and anything that pulls the balance below the line is sold back to restore it, following rules the member set once. The interface interrupts for exactly one event: spending more than the cushion holds.</p>
-
-      <div class="section-sublabel">The problem</div>
-      <p class="section-body">Two hard things are tangled together. Investing well is one problem; forecasting irregular medical costs is another. Existing HSA investing features hand the member both at once and offer a brokerage screen as the answer. So the safe move is to leave everything in cash, and years of tax-free compounding are quietly lost to inflation.</p>
-
-      <div class="section-sublabel">The insight</div>
-      <p class="section-body">There is only one number the member actually has an opinion about: how much cash they want within reach. Every other decision (when to invest, how much, what to sell when a bill lands) can be derived from that number plus a few rules captured up front. Design the account around the cushion line and the rest becomes bookkeeping the system can do silently.</p>
-
-      <div class="section-sublabel">The approach</div>
-      <p class="section-body">The flow is built as one setup and three engines:</p>
-      <ul class="copy-list">
-        <li><strong>Setup</strong> is strictly linear: seven short steps, a progress rail that never disappears, and nothing goes live until a final review screen. The cash target is pre-seeded from the member's own claim history, so the default is already close to right.</li>
-        <li><strong>Invest the surplus</strong> runs on every contribution. Cash above the line is invested at the member's mix; they see a receipt, never a prompt.</li>
-        <li><strong>Replenish the cushion</strong> runs after a claim or a market dip drops cash below the line. The account sells per the member's sell order and states plainly what happened and why.</li>
-        <li><strong>Spend past the cushion</strong> is the one flow that stops the member. A payment larger than spendable cash opens a single screen with three ways out (sell just the gap, raise the target, or cancel), with the gentlest option preselected.</li>
-      </ul>
-
-      <div class="section-sublabel">Principles that run through every screen</div>
-      <ul class="copy-list">
-        <li><strong>Set decisions once.</strong> Anything that can be a standing rule is captured at setup, not re-asked later.</li>
-        <li><strong>Automate the routine; interrupt only for the exceptional.</strong> Sweeps and replenishments are logged, not confirmed.</li>
-        <li><strong>Say what the system did, and why.</strong> Every automatic sale names its cause, whether a claim or a price move, in plain language.</li>
-        <li><strong>The cushion line is always on screen.</strong> The member can see where they stand against their target from any account view.</li>
-      </ul>
-
-      <div class="section-sublabel">My role</div>
-      <p class="section-body">Concept design: problem framing, flow architecture, and the wireframes shown here. <em>[Adjust for your actual role and team, whether this was an internal concept or a personal exploration, and where it went next.]</em></p>
-    </div>
-
-    <div class="section-full section-full--gray">
-      <h2 class="section-label">How to read this</h2>
-      <p class="section-body">Every screen in the concept is below, in the order a member meets it, grouped into four flows. Each screen has the intent on the left and the wireframe on the right. Click any wireframe to see it full size.</p>
+      <p class="section-body">Fidelity contracted me as the UX designer for their HSA product. At the time, investing your HSA surplus meant calling a phone number; there was no self-service path at all. Only 23% of members who held cash beyond their HSA's default ever invested it.</p>
+      <p class="section-body">The product team set a target: 45%. My read was that a phone line was never going to get us there. The pitch was a self-service flow built into the main HSA page and the mobile app, direct enough that members could set it up themselves.</p>
+      <p class="section-body">I owned that flow for 12 months, working with user research to answer the open questions, then designing every screen in Fidelity's own design system. What's below is a reconstruction, not the real UI: an NDA covers the actual screens, so these wireframes rebuild the logic of the flow without showing Fidelity's design system.</p>
     </div>
 
     <div class="flow-band">
       <div class="flow-band__letter">A</div>
       <div>
-        <h2 class="flow-band__title">One-time setup: seven steps, then the account is live</h2>
-        <p class="flow-band__intro">Setup is strictly linear: left to right, no branches until the member confirms. The rail is always visible and nothing goes live until the final screen.</p>
+        <h2 class="flow-band__title">On-boarding workflow</h2>
+        <p class="flow-band__intro">Strictly linear. Seven steps, nothing live until the final confirm.</p>
       </div>
     </div>
-    <div class="screen-row" id="s2a">
+    <div class="screen-row" id="a1">
       <div class="screen-copy">
-        <div class="screen-copy__eyebrow">2A &middot; Log in: before setup</div>
         <h3 class="screen-copy__title">Familiar front door</h3>
-        <p class="screen-copy__body">The flow starts on the bank&#x27;s normal sign-in. Nothing here mentions HSAs or investing; the goal is to keep the entry point identical to what members already know so the new capability doesn&#x27;t raise the stakes of logging in.</p>
+        <p class="screen-copy__body">Same sign-in you already know. Nothing HSA-specific yet, on purpose.</p>
         <p class="screen-copy__note">Entry point only; nothing HSA-specific yet.</p>
       </div>
-      <div class="screen-frame" role="button" tabindex="0" aria-label="Enlarge 2A">
+      <div class="screen-frame" role="button" tabindex="0" aria-label="Enlarge A1">
         <div class="screen-frame__wrap">
           <div class="screen-frame__inner">
             <div class="wf"><div class="wf-chrome"><span class="wf-tl"></span><span class="wf-tl"></span><span class="wf-tl"></span><span class="wf-url"></span></div>
@@ -205,14 +169,13 @@
         </div>
       </div>
     </div>
-    <div class="screen-row" id="s2b">
+    <div class="screen-row" id="a2">
       <div class="screen-copy">
-        <div class="screen-copy__eyebrow">2B &middot; Step 1: Open HSA account</div>
         <h3 class="screen-copy__title">Step 1: Open the HSA</h3>
-        <p class="screen-copy__body">A seven-step setup rail runs down the left edge and never disappears, so members always know how far they are from done.</p><p class="screen-copy__body">This first step just confirms eligibility and the payroll contribution already on file. Two minutes, no decisions that can be gotten wrong.</p>
+        <p class="screen-copy__body">A seven-step rail that never disappears. Step one just confirms eligibility and the payroll contribution already on file.</p>
         <p class="screen-copy__note">The progress rail is the spine of the whole setup.</p>
       </div>
-      <div class="screen-frame" role="button" tabindex="0" aria-label="Enlarge 2B">
+      <div class="screen-frame" role="button" tabindex="0" aria-label="Enlarge A2">
         <div class="screen-frame__wrap">
           <div class="screen-frame__inner">
             <div class="wf"><div class="wf-chrome"><span class="wf-tl"></span><span class="wf-tl"></span><span class="wf-tl"></span><span class="wf-url"></span></div>
@@ -242,14 +205,13 @@
         </div>
       </div>
     </div>
-    <div class="screen-row" id="s2c">
+    <div class="screen-row" id="a3">
       <div class="screen-copy">
-        <div class="screen-copy__eyebrow">2C &middot; Step 2: Start investing</div>
         <h3 class="screen-copy__title">Step 2: The pitch, in one diagram</h3>
-        <p class="screen-copy__body">Investing is optional and framed around a single idea: keep a cash cushion for this year&#x27;s medical costs, put everything above it to work for later.</p><p class="screen-copy__body">The two-part cash / invested diagram carries the entire argument, with no paragraphs of investing theory.</p>
+        <p class="screen-copy__body">One diagram makes the whole pitch: keep a cash reserve for this year&#x27;s costs, invest everything above it.</p>
         <p class="screen-copy__note">The two-part diagram is the whole pitch on this page.</p>
       </div>
-      <div class="screen-frame" role="button" tabindex="0" aria-label="Enlarge 2C">
+      <div class="screen-frame" role="button" tabindex="0" aria-label="Enlarge A3">
         <div class="screen-frame__wrap">
           <div class="screen-frame__inner">
             <div class="wf"><div class="wf-chrome"><span class="wf-tl"></span><span class="wf-tl"></span><span class="wf-tl"></span><span class="wf-url"></span></div>
@@ -259,7 +221,7 @@
 <div style="flex:1;display:flex;flex-direction:column;gap:14px">
 <p class="wf-k">Optional</p>
 <h3 class="wf-h">Put the surplus to work</h3>
-<p class="wf-p">Keep a cash cushion for this year's costs. Everything above it can be invested for later.</p>
+<p class="wf-p">Keep a cash reserve for this year's costs. Everything above it can be invested for later.</p>
 <div class="wf-row"><div class="wf-btn wf-btn-p">Start investing</div><div class="wf-btn">Not now</div></div>
 </div>
 <div class="wf-box" style="width:290px;gap:14px">
@@ -274,14 +236,13 @@
         </div>
       </div>
     </div>
-    <div class="screen-row" id="s2d">
+    <div class="screen-row" id="a4">
       <div class="screen-copy">
-        <div class="screen-copy__eyebrow">2D &middot; Step 3: Choose self-directed</div>
         <h3 class="screen-copy__title">Step 3: Pick a style</h3>
-        <p class="screen-copy__body">Two paths: self-directed, where the member sets the funds and rules, or a single managed target-date fund.</p><p class="screen-copy__body">The next four steps assume self-directed. Members who pick “managed for me” skip straight to review.</p>
+        <p class="screen-copy__body">Self-directed or a single target-date fund. Everything from here assumes self-directed.</p>
         <p class="screen-copy__note">Self-directed is the path the next four steps assume.</p>
       </div>
-      <div class="screen-frame" role="button" tabindex="0" aria-label="Enlarge 2D">
+      <div class="screen-frame" role="button" tabindex="0" aria-label="Enlarge A4">
         <div class="screen-frame__wrap">
           <div class="screen-frame__inner">
             <div class="wf"><div class="wf-chrome"><span class="wf-tl"></span><span class="wf-tl"></span><span class="wf-tl"></span><span class="wf-url"></span></div>
@@ -310,14 +271,13 @@
         </div>
       </div>
     </div>
-    <div class="screen-row" id="s2e">
+    <div class="screen-row" id="a5">
       <div class="screen-copy">
-        <div class="screen-copy__eyebrow">2E &middot; Step 4: Set cash target</div>
         <h3 class="screen-copy__title">Step 4: Draw the line</h3>
-        <p class="screen-copy__body">The cash target is the number everything else keys off. The member drags a slider or types an amount.</p><p class="screen-copy__body">It&#x27;s pre-seeded from their own history, the average of their claims over the last twelve months, so the default is already close to right.</p>
+        <p class="screen-copy__body">The cash target drives everything else, so I seeded it from the member&#x27;s own claim history.</p>
         <p class="screen-copy__note">The suggested target is computed from the member&#x27;s real claim history.</p>
       </div>
-      <div class="screen-frame" role="button" tabindex="0" aria-label="Enlarge 2E">
+      <div class="screen-frame" role="button" tabindex="0" aria-label="Enlarge A5">
         <div class="screen-frame__wrap">
           <div class="screen-frame__inner">
             <div class="wf" style="border-color:#111111"><div class="wf-chrome" style="background:#e0e0e0"><span class="wf-tl"></span><span class="wf-tl"></span><span class="wf-tl"></span><span class="wf-url"></span></div>
@@ -349,14 +309,13 @@
         </div>
       </div>
     </div>
-    <div class="screen-row" id="s2f">
+    <div class="screen-row" id="a6">
       <div class="screen-copy">
-        <div class="screen-copy__eyebrow">2F &middot; Step 5: Choose funds</div>
         <h3 class="screen-copy__title">Step 5: Choose the funds</h3>
-        <p class="screen-copy__body">One tap accepts a target-date fund at 100%, or the member builds a custom mix.</p><p class="screen-copy__body">A custom mix can&#x27;t be submitted until the allocations total exactly 100%; the form blocks rather than rounds.</p>
+        <p class="screen-copy__body">One tap for a target-date fund, or build a custom mix; it won&#x27;t submit short of exactly 100%.</p>
         <p class="screen-copy__note">Blocks until it totals exactly 100%.</p>
       </div>
-      <div class="screen-frame" role="button" tabindex="0" aria-label="Enlarge 2F">
+      <div class="screen-frame" role="button" tabindex="0" aria-label="Enlarge A6">
         <div class="screen-frame__wrap">
           <div class="screen-frame__inner">
             <div class="wf" style="border-color:#111111"><div class="wf-chrome" style="background:#e0e0e0"><span class="wf-tl"></span><span class="wf-tl"></span><span class="wf-tl"></span><span class="wf-url"></span></div>
@@ -386,14 +345,13 @@
         </div>
       </div>
     </div>
-    <div class="screen-row" id="s2g">
+    <div class="screen-row" id="a7">
       <div class="screen-copy">
-        <div class="screen-copy__eyebrow">2G &middot; Step 6: Replenish rules</div>
         <h3 class="screen-copy__title">Step 6: Set the replenish rules once</h3>
-        <p class="screen-copy__body">When cash later drops below the line, the account sells to refill it. The member sets the sell order and whether a sale covers just the shortfall or restores the full cushion, once, here.</p><p class="screen-copy__body">Every automated sale afterward follows these rules without asking again.</p>
+        <p class="screen-copy__body">Set the sell order once, here. Most sales still ask for an email confirmation first; only single-fund auto-sell skips it.</p>
         <p class="screen-copy__note">Set once. Every later sale follows these rules.</p>
       </div>
-      <div class="screen-frame" role="button" tabindex="0" aria-label="Enlarge 2G">
+      <div class="screen-frame" role="button" tabindex="0" aria-label="Enlarge A7">
         <div class="screen-frame__wrap">
           <div class="screen-frame__inner">
             <div class="wf" style="border-color:#111111"><div class="wf-chrome" style="background:#e0e0e0"><span class="wf-tl"></span><span class="wf-tl"></span><span class="wf-tl"></span><span class="wf-url"></span></div>
@@ -423,7 +381,7 @@
   <div style="flex:1;padding:9px;text-align:center;font:600 11px 'IBM Plex Sans',Helvetica,Arial,sans-serif;background:#111111;color:#fff">Back to target</div>
   <div style="flex:1;padding:9px;text-align:center;font:600 11px 'IBM Plex Sans',Helvetica,Arial,sans-serif;color:#666666">Cover shortfall only</div>
 </div>
-<p class="wf-p">"Back to target" refills the full cushion. "Cover shortfall" sells only what a charge needed.</p>
+<p class="wf-p">"Back to target" refills the full cash reserve. "Cover shortfall" sells only what a charge needed.</p>
 </div>
 </div>
 <div style="flex:1"></div>
@@ -433,14 +391,13 @@
         </div>
       </div>
     </div>
-    <div class="screen-row" id="s2h">
+    <div class="screen-row" id="a8">
       <div class="screen-copy">
-        <div class="screen-copy__eyebrow">2H &middot; Step 7: Review &amp; confirm</div>
         <h3 class="screen-copy__title">Step 7: Review and turn on</h3>
-        <p class="screen-copy__body">A single screen restates every choice (cash target, cadence, contribution, fund mix, sell order) with an edit link on each.</p><p class="screen-copy__body">Confirming here is the only moment the member flips the feature on. Everything after this is automatic.</p>
+        <p class="screen-copy__body">One screen restates every choice with an edit link. Confirming here is the only moment setup goes live.</p>
         <p class="screen-copy__note">Nothing is live until this screen is confirmed.</p>
       </div>
-      <div class="screen-frame" role="button" tabindex="0" aria-label="Enlarge 2H">
+      <div class="screen-frame" role="button" tabindex="0" aria-label="Enlarge A8">
         <div class="screen-frame__wrap">
           <div class="screen-frame__inner">
             <div class="wf"><div class="wf-chrome"><span class="wf-tl"></span><span class="wf-tl"></span><span class="wf-tl"></span><span class="wf-url"></span></div>
@@ -471,17 +428,16 @@
       <div class="flow-band__letter">B</div>
       <div>
         <h2 class="flow-band__title">Invest the surplus: invisible by design</h2>
-        <p class="flow-band__intro">Once setup is on, contributions that push cash above the target are swept into funds automatically. The member only ever sees a receipt.</p>
+        <p class="flow-band__intro">Runs on its own. You only ever see the receipt.</p>
       </div>
     </div>
-    <div class="screen-row" id="s2i">
+    <div class="screen-row" id="b1">
       <div class="screen-copy">
-        <div class="screen-copy__eyebrow">2I &middot; Account home</div>
         <h3 class="screen-copy__title">Account home</h3>
-        <p class="screen-copy__body">The steady-state view. Total balance splits into cash and invested, and the cash target line is always drawn so the member can see at a glance whether they&#x27;re above or below it.</p><p class="screen-copy__body">Primary actions: pay a bill, adjust the target, edit funds.</p>
+        <p class="screen-copy__body">Cash and invested split at a glance, with the target line always drawn.</p>
         <p class="screen-copy__note">The line is the target, always visible.</p>
       </div>
-      <div class="screen-frame" role="button" tabindex="0" aria-label="Enlarge 2I">
+      <div class="screen-frame" role="button" tabindex="0" aria-label="Enlarge B1">
         <div class="screen-frame__wrap">
           <div class="screen-frame__inner">
             <div class="wf"><div class="wf-chrome"><span class="wf-tl"></span><span class="wf-tl"></span><span class="wf-tl"></span><span class="wf-url"></span></div>
@@ -504,14 +460,13 @@
         </div>
       </div>
     </div>
-    <div class="screen-row" id="s2j">
+    <div class="screen-row" id="b2">
       <div class="screen-copy">
-        <div class="screen-copy__eyebrow">2J &middot; Sweep confirmation</div>
         <h3 class="screen-copy__title">Sweep confirmation</h3>
-        <p class="screen-copy__body">When a payroll contribution pushes cash above the target, the surplus is invested at the member&#x27;s mix automatically.</p><p class="screen-copy__body">This screen is a receipt, not a prompt; it shows what was bought and that cash is back at the line. There is nothing to approve.</p>
+        <p class="screen-copy__body">A contribution pushed cash over the line, so it got invested automatically. This is a receipt, not a prompt.</p>
         <p class="screen-copy__note">Log only. Nothing to decide.</p>
       </div>
-      <div class="screen-frame" role="button" tabindex="0" aria-label="Enlarge 2J">
+      <div class="screen-frame" role="button" tabindex="0" aria-label="Enlarge B2">
         <div class="screen-frame__wrap">
           <div class="screen-frame__inner">
             <div class="wf"><div class="wf-chrome"><span class="wf-tl"></span><span class="wf-tl"></span><span class="wf-tl"></span><span class="wf-url"></span></div>
@@ -536,18 +491,17 @@
     <div class="flow-band">
       <div class="flow-band__letter">C</div>
       <div>
-        <h2 class="flow-band__title">Replenish the cushion: runs after the fact</h2>
-        <p class="flow-band__intro">When a claim or a market dip drops cash below the target, the replenish rules sell to restore it and notify the member afterward.</p>
+        <h2 class="flow-band__title">Replenish the cash reserve</h2>
+        <p class="flow-band__intro">Before anything sells, most members get an email to confirm. The one exception: a single fund with auto-sell on just gets notified after.</p>
       </div>
     </div>
-    <div class="screen-row" id="s2k">
+    <div class="screen-row" id="c1">
       <div class="screen-copy">
-        <div class="screen-copy__eyebrow">2K &middot; Auto-sale notice</div>
         <h3 class="screen-copy__title">Auto-sale notice</h3>
-        <p class="screen-copy__body">If fund values fall enough to drop cash below the target, the rules sell to restore it and the member is told after the fact.</p><p class="screen-copy__body">The copy is blunt about cause and effect: a price move triggered a sale. Hiding that would erode trust the first time someone noticed.</p>
+        <p class="screen-copy__body">The exception case: one fund, auto-sell on, so a price drop just sells and tells you after. Everyone else gets an email to confirm first.</p>
         <p class="screen-copy__note">A price move can sell you out, so say so plainly.</p>
       </div>
-      <div class="screen-frame" role="button" tabindex="0" aria-label="Enlarge 2K">
+      <div class="screen-frame" role="button" tabindex="0" aria-label="Enlarge C1">
         <div class="screen-frame__wrap">
           <div class="screen-frame__inner">
             <div class="wf" style="border-color:#111111"><div class="wf-chrome" style="background:#e0e0e0"><span class="wf-tl"></span><span class="wf-tl"></span><span class="wf-tl"></span><span class="wf-url"></span></div>
@@ -556,7 +510,7 @@
 <div class="wf-box" style="border-color:#111111">
   <p class="wf-k" style="color:#111111">Why this happened</p>
   <h3 class="wf-h">We sold $180 to refill your cash</h3>
-  <p class="wf-p">Fund values fell, which pushed your cash below the $1,000 target. Your rules restore the cushion in full.</p>
+  <p class="wf-p">Fund values fell, which pushed your cash below the $1,000 target. Your rules restore the cash reserve in full.</p>
 </div>
 <div class="wf-cols">
 <div class="wf-box" style="flex:1"><p class="wf-k">What sold</p><div class="wf-row" style="justify-content:space-between"><div class="wf-line" style="width:50%"></div><p class="wf-p">$180</p></div><div class="wf-row" style="justify-content:space-between"><p class="wf-p">Tax lot</p><div class="wf-line" style="width:36%"></div></div></div>
@@ -572,18 +526,17 @@
     <div class="flow-band">
       <div class="flow-band__letter">D</div>
       <div>
-        <h2 class="flow-band__title">Spend past the cushion: the one flow that interrupts</h2>
-        <p class="flow-band__intro">The only place the system stops the member: a payment larger than spendable cash. Three resolutions live on one screen.</p>
+        <h2 class="flow-band__title">Spend past the cash reserve: the one flow that interrupts</h2>
+        <p class="flow-band__intro">The one flow that stops you: spending past the cash reserve.</p>
       </div>
     </div>
-    <div class="screen-row" id="s2i-d">
+    <div class="screen-row" id="d1">
       <div class="screen-copy">
-        <div class="screen-copy__eyebrow">2I &middot; Account home</div>
         <h3 class="screen-copy__title">Account home</h3>
         <p class="screen-copy__body">The steady-state view. Total balance splits into cash and invested, and the cash target line is always drawn so the member can see at a glance whether they&#x27;re above or below it.</p><p class="screen-copy__body">Primary actions: pay a bill, adjust the target, edit funds.</p>
         <p class="screen-copy__note">The line is the target, always visible.</p>
       </div>
-      <div class="screen-frame" role="button" tabindex="0" aria-label="Enlarge 2I">
+      <div class="screen-frame" role="button" tabindex="0" aria-label="Enlarge D1">
         <div class="screen-frame__wrap">
           <div class="screen-frame__inner">
             <div class="wf"><div class="wf-chrome"><span class="wf-tl"></span><span class="wf-tl"></span><span class="wf-tl"></span><span class="wf-url"></span></div>
@@ -606,14 +559,13 @@
         </div>
       </div>
     </div>
-    <div class="screen-row" id="s2l">
+    <div class="screen-row" id="d2">
       <div class="screen-copy">
-        <div class="screen-copy__eyebrow">2L &middot; Pre-spend warning</div>
         <h3 class="screen-copy__title">Pre-spend warning</h3>
-        <p class="screen-copy__body">The one flow that interrupts. When a bill is larger than spendable cash, the member is stopped and given three ways forward on a single screen: sell only the gap, raise the target, or cancel.</p><p class="screen-copy__body">“Sell only the gap” is the default because it&#x27;s the gentlest; it changes nothing about the member&#x27;s setup.</p>
+        <p class="screen-copy__body">The one screen that stops you: a bill bigger than your spendable cash, three ways out, gentlest one first.</p>
         <p class="screen-copy__note">Three ways out, one screen. Gentlest option is the default.</p>
       </div>
-      <div class="screen-frame" role="button" tabindex="0" aria-label="Enlarge 2L">
+      <div class="screen-frame" role="button" tabindex="0" aria-label="Enlarge D2">
         <div class="screen-frame__wrap">
           <div class="screen-frame__inner">
             <div class="wf" style="border-color:#111111"><div class="wf-chrome" style="background:#e0e0e0"><span class="wf-tl"></span><span class="wf-tl"></span><span class="wf-tl"></span><span class="wf-url"></span></div>
@@ -637,14 +589,13 @@
         </div>
       </div>
     </div>
-    <div class="screen-row" id="s2m">
+    <div class="screen-row" id="d3">
       <div class="screen-copy">
-        <div class="screen-copy__eyebrow">2M &middot; Sale confirmed, payment clears</div>
         <h3 class="screen-copy__title">Sale confirmed, payment clears</h3>
-        <p class="screen-copy__body">After the member chooses to sell the gap, the confirmation shows exactly what was liquidated, following their sell order, and that nothing extra was sold.</p><p class="screen-copy__body">Cash lands at zero, the next sweep date is shown, and a receipt is available.</p>
+        <p class="screen-copy__body">Shows exactly what sold to cover the gap, and nothing more.</p>
         <p class="screen-copy__note">Shows the sale followed the member&#x27;s sell order, nothing extra.</p>
       </div>
-      <div class="screen-frame" role="button" tabindex="0" aria-label="Enlarge 2M">
+      <div class="screen-frame" role="button" tabindex="0" aria-label="Enlarge D3">
         <div class="screen-frame__wrap">
           <div class="screen-frame__inner">
             <div class="wf"><div class="wf-chrome"><span class="wf-tl"></span><span class="wf-tl"></span><span class="wf-tl"></span><span class="wf-url"></span></div>
@@ -667,14 +618,13 @@
         </div>
       </div>
     </div>
-    <div class="screen-row" id="s2n">
+    <div class="screen-row" id="d4">
       <div class="screen-copy">
-        <div class="screen-copy__eyebrow">2N &middot; Adjust target (from anywhere)</div>
         <h3 class="screen-copy__title">Adjust the target from anywhere</h3>
-        <p class="screen-copy__body">The cash target isn&#x27;t locked at setup. The same slider from step 4 is reachable from the account any time.</p><p class="screen-copy__body">Raising it is honest about the consequence: it will sell funds at the next cycle to build the bigger cushion.</p>
+        <p class="screen-copy__body">Same slider from step 4, reachable any time, honest that raising it means selling funds.</p>
         <p class="screen-copy__note">Same control as step 4, reachable later.</p>
       </div>
-      <div class="screen-frame" role="button" tabindex="0" aria-label="Enlarge 2N">
+      <div class="screen-frame" role="button" tabindex="0" aria-label="Enlarge D4">
         <div class="screen-frame__wrap">
           <div class="screen-frame__inner">
             <div class="wf"><div class="wf-chrome"><span class="wf-tl"></span><span class="wf-tl"></span><span class="wf-tl"></span><span class="wf-url"></span></div>
@@ -697,13 +647,8 @@
     </div>
 
     <div class="section-full">
-      <h2 class="section-label">What I'd validate next</h2>
-      <ul class="copy-list">
-        <li><strong>Trust in silent selling.</strong> Will members accept an account that sells positions without asking first? The honesty of the replenish notice is doing a lot of work and needs testing against real reactions.</li>
-        <li><strong>The seeded cash target.</strong> Does a target derived from claim history land close enough that members accept the default, or does it feel arbitrary and get overridden every time?</li>
-        <li><strong>The one interruption.</strong> Does the pre-spend screen read as the system protecting the member, or as being blocked from their own money?</li>
-        <li><strong>Setup length.</strong> Seven steps is a lot. Which steps can be defaulted away entirely for members who choose "managed for me"?</li>
-      </ul>
+      <h2 class="section-label">Where it left off</h2>
+      <p class="section-body">The flow got to hand-off: validated through research, designed end to end, ready for engineering. No dev team was ever staffed before my contract ended, so I don't know whether Fidelity built it.</p>
     </div>
 
     <div class="case-footer">
