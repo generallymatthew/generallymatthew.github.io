@@ -668,6 +668,18 @@
           <li>The functionality and design of the app was poor. The app did not update in a timely manner and information required to make the awarding decisions was fragmented.</li>
           <li>The amount of time the admins had to spend each year leading up to the awarding process training their co-workers on how to use our app was untenable in the long run.</li>
         </ul>
+        <div class="section-sublabel" style="margin-top:24px;">My Role</div>
+        <p class="section-body">I was the sole senior UX designer on this project, owning:</p>
+        <ul class="content-list" style="display:grid;grid-template-columns:repeat(2,1fr);gap:2px 8px;">
+          <li style="margin:0 0 2px;">Discovery</li>
+          <li style="margin:0 0 2px;">Problem framing</li>
+          <li style="margin:0 0 2px;">Hypotheses</li>
+          <li style="margin:0 0 2px;">Ideation</li>
+          <li style="margin:0 0 2px;">Prototyping</li>
+          <li style="margin:0 0 2px;">Usability testing</li>
+          <li style="margin:0 0 2px;">Analytics</li>
+          <li style="margin:0;">Dev handoff</li>
+        </ul>
       </div>
     </div>
 
@@ -720,7 +732,6 @@
       <h2 class="section-label">Creative Solution</h2>
       <p class="section-body">Working with support, we diagrammed all the logic used to make an awarding decision so that there was no AI black-box scenario where the AI chooses a recipient but no one is exactly sure how that choice was made.</p>
       <p class="section-body">To ensure the AI does not hallucinate, we built parallel code whose sole job was to run the application data (directly from the database, unmediated by AI) through the scholarship award equation, then compare that result to the AI's result. If they match, great. If not, the AI reruns its process until they do.</p>
-      <p class="section-body">If you're asking yourself why we're even using AI if this can be done programmatically with code alone: I would point you to significant evidence that announcing a new feature built using AI can positively affect stock prices of public companies.</p>
     </div>
 
     <!-- Annotated UI Mockup -->

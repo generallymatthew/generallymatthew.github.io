@@ -41,6 +41,9 @@
     .screen-copy__title { font-size: 18px; font-weight: 700; color: #0e0c0c; margin-bottom: 12px; }
     .screen-copy__body { font-size: 14.5px; line-height: 25px; color: #333; margin-bottom: 12px; }
     .screen-copy__note { font-size: 13px; line-height: 21px; color: #767676; font-style: italic; border-left: 2px solid #98e5e6; padding-left: 10px; margin-top: 16px; }
+    .screen-copy__insight { margin-top: 14px; padding: 12px 14px; background: #f7f7f7; border-radius: 4px; }
+    .screen-copy__insight-label { display: block; font-size: 10px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: #fe204a; margin-bottom: 5px; }
+    .screen-copy__insight p { font-size: 13.5px; line-height: 22px; color: #333; margin: 0; }
 
     .screen-frame { flex: 1; min-width: 0; background: #e6e6e6; border: 1px solid #d8d8d8; padding: 22px; display: flex; justify-content: center; align-items: flex-start; cursor: zoom-in; overflow: hidden; }
     .screen-frame__wrap { --wf-scale: 0.62; width: calc(720px * var(--wf-scale)); max-width: 100%; overflow: hidden; }
@@ -134,9 +137,21 @@
 
     <div class="section-full">
       <h2 class="section-label">Overview</h2>
-      <p class="section-body">Fidelity contracted me as the UX designer for their HSA product. At the time, investing your HSA surplus meant calling a phone number; there was no self-service path at all. Only 23% of members who held cash beyond their HSA's default ever invested it.</p>
-      <p class="section-body">The product team set a target: 45%. My read was that a phone line was never going to get us there. The pitch was a self-service flow built into the main HSA page and the mobile app, direct enough that members could set it up themselves.</p>
-      <p class="section-body">I owned that flow for 12 months, working with user research to answer the open questions, then designing every screen in Fidelity's own design system. What's below is a reconstruction, not the real UI: an NDA covers the actual screens, so these wireframes rebuild the logic of the flow without showing Fidelity's design system.</p>
+      <p class="section-body">Fidelity contracted us to design their HSA product. At the time, investing your HSA surplus meant calling a phone number; there was no self-service path at all. Only 23% of members who held cash beyond their HSA's default ever invested it.</p>
+      <p class="section-body">The product team set a target: 45%. Our read was that a phone line was never going to get us there. The pitch was a self-service flow built into the main HSA page and the mobile app, direct enough that members could set it up themselves.</p>
+      <p class="section-body">We owned that flow for 12 months, working with user research to answer the open questions, then designing every screen in Fidelity's own design system. What's below is a reconstruction, not the real UI: an NDA covers the actual screens, so these wireframes rebuild the logic of the flow without showing Fidelity's design system.</p>
+      <div class="section-sublabel">My Role</div>
+      <p class="section-body">I was the sole UX designer on this contract, start to finish, owning:</p>
+      <ul class="content-list" style="display:grid;grid-template-columns:repeat(2,1fr);gap:2px 8px;max-width:720px;">
+        <li style="margin:0 0 2px;">Discovery</li>
+        <li style="margin:0 0 2px;">Problem framing</li>
+        <li style="margin:0 0 2px;">Hypotheses</li>
+        <li style="margin:0 0 2px;">Ideation</li>
+        <li style="margin:0 0 2px;">Prototyping</li>
+        <li style="margin:0 0 2px;">Usability testing</li>
+        <li style="margin:0 0 2px;">Analytics</li>
+        <li style="margin:0;">Dev-ready specs</li>
+      </ul>
     </div>
 
     <div class="flow-band">
@@ -151,6 +166,7 @@
         <h3 class="screen-copy__title">Familiar front door</h3>
         <p class="screen-copy__body">Same sign-in you already know. Nothing HSA-specific yet, on purpose.</p>
         <p class="screen-copy__note">Entry point only; nothing HSA-specific yet.</p>
+        <div class="screen-copy__insight"><span class="screen-copy__insight-label">In testing</span><p>Nobody paused here in testing, which was the goal: it read exactly like the sign-in they already knew.</p></div>
       </div>
       <div class="screen-frame" role="button" tabindex="0" aria-label="Enlarge A1">
         <div class="screen-frame__wrap">
@@ -174,6 +190,7 @@
         <h3 class="screen-copy__title">Step 1: Open the HSA</h3>
         <p class="screen-copy__body">A seven-step rail that never disappears. Step one just confirms eligibility and the payroll contribution already on file.</p>
         <p class="screen-copy__note">The progress rail is the spine of the whole setup.</p>
+        <div class="screen-copy__insight"><span class="screen-copy__insight-label">In testing</span><p>We first tried a horizontal progress bar across the top. Users lost track of where they were mid-flow, so we moved it to a persistent side rail.</p></div>
       </div>
       <div class="screen-frame" role="button" tabindex="0" aria-label="Enlarge A2">
         <div class="screen-frame__wrap">
@@ -210,6 +227,7 @@
         <h3 class="screen-copy__title">Step 2: The pitch, in one diagram</h3>
         <p class="screen-copy__body">One diagram makes the whole pitch: keep a cash reserve for this year&#x27;s costs, invest everything above it.</p>
         <p class="screen-copy__note">The two-part diagram is the whole pitch on this page.</p>
+        <div class="screen-copy__insight"><span class="screen-copy__insight-label">In testing</span><p>An early draft explained the split in a paragraph; people skimmed right past it. The single diagram landed the whole pitch in seconds.</p></div>
       </div>
       <div class="screen-frame" role="button" tabindex="0" aria-label="Enlarge A3">
         <div class="screen-frame__wrap">
@@ -241,6 +259,7 @@
         <h3 class="screen-copy__title">Step 3: Pick a style</h3>
         <p class="screen-copy__body">Self-directed or a single target-date fund. Everything from here assumes self-directed.</p>
         <p class="screen-copy__note">Self-directed is the path the next four steps assume.</p>
+        <div class="screen-copy__insight"><span class="screen-copy__insight-label">In testing</span><p>We worried the two paths would need more explaining. They didn't: once we added one line under each card, people chose confidently.</p></div>
       </div>
       <div class="screen-frame" role="button" tabindex="0" aria-label="Enlarge A4">
         <div class="screen-frame__wrap">
@@ -274,8 +293,9 @@
     <div class="screen-row" id="a5">
       <div class="screen-copy">
         <h3 class="screen-copy__title">Step 4: Draw the line</h3>
-        <p class="screen-copy__body">The cash target drives everything else, so I seeded it from the member&#x27;s own claim history.</p>
+        <p class="screen-copy__body">The cash target drives everything else, so we seeded it from the member&#x27;s own claim history.</p>
         <p class="screen-copy__note">The suggested target is computed from the member&#x27;s real claim history.</p>
+        <div class="screen-copy__insight"><span class="screen-copy__insight-label">In testing</span><p>The first version asked for a dollar amount in a blank field, and most people stalled; they didn't know their own number. Pre-seeding the slider from claim history fixed it.</p></div>
       </div>
       <div class="screen-frame" role="button" tabindex="0" aria-label="Enlarge A5">
         <div class="screen-frame__wrap">
@@ -314,6 +334,7 @@
         <h3 class="screen-copy__title">Step 5: Choose the funds</h3>
         <p class="screen-copy__body">One tap for a target-date fund, or build a custom mix; it won&#x27;t submit short of exactly 100%.</p>
         <p class="screen-copy__note">Blocks until it totals exactly 100%.</p>
+        <div class="screen-copy__insight"><span class="screen-copy__insight-label">In testing</span><p>We originally let the mix go over or under 100% with just a warning; people ignored it and submitted anyway. Blocking submission forced the fix before it became a support call.</p></div>
       </div>
       <div class="screen-frame" role="button" tabindex="0" aria-label="Enlarge A6">
         <div class="screen-frame__wrap">
@@ -350,6 +371,7 @@
         <h3 class="screen-copy__title">Step 6: Set the replenish rules once</h3>
         <p class="screen-copy__body">Set the sell order once, here. Most sales still ask for an email confirmation first; only single-fund auto-sell skips it.</p>
         <p class="screen-copy__note">Set once. Every later sale follows these rules.</p>
+        <div class="screen-copy__insight"><span class="screen-copy__insight-label">In testing</span><p>This was the screen people moved through fastest, and the one they came back to change most. We stopped trying to perfect it here and made sure it stayed reachable later instead.</p></div>
       </div>
       <div class="screen-frame" role="button" tabindex="0" aria-label="Enlarge A7">
         <div class="screen-frame__wrap">
@@ -396,6 +418,7 @@
         <h3 class="screen-copy__title">Step 7: Review and turn on</h3>
         <p class="screen-copy__body">One screen restates every choice with an edit link. Confirming here is the only moment setup goes live.</p>
         <p class="screen-copy__note">Nothing is live until this screen is confirmed.</p>
+        <div class="screen-copy__insight"><span class="screen-copy__insight-label">In testing</span><p>People specifically asked to see everything before committing. We'd split confirmation across two screens; folding it into one got the strongest reaction in the whole study.</p></div>
       </div>
       <div class="screen-frame" role="button" tabindex="0" aria-label="Enlarge A8">
         <div class="screen-frame__wrap">
@@ -436,6 +459,7 @@
         <h3 class="screen-copy__title">Account home</h3>
         <p class="screen-copy__body">Cash and invested split at a glance, with the target line always drawn.</p>
         <p class="screen-copy__note">The line is the target, always visible.</p>
+        <div class="screen-copy__insight"><span class="screen-copy__insight-label">In testing</span><p>In every session, the first thing people looked for was whether they were still okay. Keeping the target line on the dashboard, not a details page, answered that instantly.</p></div>
       </div>
       <div class="screen-frame" role="button" tabindex="0" aria-label="Enlarge B1">
         <div class="screen-frame__wrap">
@@ -465,6 +489,7 @@
         <h3 class="screen-copy__title">Sweep confirmation</h3>
         <p class="screen-copy__body">A contribution pushed cash over the line, so it got invested automatically. This is a receipt, not a prompt.</p>
         <p class="screen-copy__note">Log only. Nothing to decide.</p>
+        <div class="screen-copy__insight"><span class="screen-copy__insight-label">In testing</span><p>We tested a version that asked people to approve the sweep first. It just added a click nobody wanted; a receipt after the fact matched how they already think about a payroll deposit.</p></div>
       </div>
       <div class="screen-frame" role="button" tabindex="0" aria-label="Enlarge B2">
         <div class="screen-frame__wrap">
@@ -500,6 +525,7 @@
         <h3 class="screen-copy__title">Auto-sale notice</h3>
         <p class="screen-copy__body">The exception case: one fund, auto-sell on, so a price drop just sells and tells you after. Everyone else gets an email to confirm first.</p>
         <p class="screen-copy__note">A price move can sell you out, so say so plainly.</p>
+        <div class="screen-copy__insight"><span class="screen-copy__insight-label">In testing</span><p>The biggest trust risk we found was a sale happening without the member knowing. Naming the cause plainly beat a vaguer &#x201C;this account was rebalanced&#x201D; by a wide margin.</p></div>
       </div>
       <div class="screen-frame" role="button" tabindex="0" aria-label="Enlarge C1">
         <div class="screen-frame__wrap">
@@ -535,6 +561,7 @@
         <h3 class="screen-copy__title">Account home</h3>
         <p class="screen-copy__body">The steady-state view. Total balance splits into cash and invested, and the cash target line is always drawn so the member can see at a glance whether they&#x27;re above or below it.</p><p class="screen-copy__body">Primary actions: pay a bill, adjust the target, edit funds.</p>
         <p class="screen-copy__note">The line is the target, always visible.</p>
+        <div class="screen-copy__insight"><span class="screen-copy__insight-label">In testing</span><p>Shown again here because it's also where &#x201C;pay a bill&#x201D; starts; people found that action fastest to spot when it led the button row.</p></div>
       </div>
       <div class="screen-frame" role="button" tabindex="0" aria-label="Enlarge D1">
         <div class="screen-frame__wrap">
@@ -564,6 +591,7 @@
         <h3 class="screen-copy__title">Pre-spend warning</h3>
         <p class="screen-copy__body">The one screen that stops you: a bill bigger than your spendable cash, three ways out, gentlest one first.</p>
         <p class="screen-copy__note">Three ways out, one screen. Gentlest option is the default.</p>
+        <div class="screen-copy__insight"><span class="screen-copy__insight-label">In testing</span><p>We'd defaulted to &#x201C;raise your target&#x201D; as the safest long-term choice. People read that as a penalty for spending their own money. Making &#x201C;sell only the gap&#x201D; the default tested far better.</p></div>
       </div>
       <div class="screen-frame" role="button" tabindex="0" aria-label="Enlarge D2">
         <div class="screen-frame__wrap">
@@ -594,6 +622,7 @@
         <h3 class="screen-copy__title">Sale confirmed, payment clears</h3>
         <p class="screen-copy__body">Shows exactly what sold to cover the gap, and nothing more.</p>
         <p class="screen-copy__note">Shows the sale followed the member&#x27;s sell order, nothing extra.</p>
+        <div class="screen-copy__insight"><span class="screen-copy__insight-label">In testing</span><p>People wanted a receipt they could point back to. Adding a plain breakdown of what sold, instead of just a success message, was the change that came up most in follow-ups.</p></div>
       </div>
       <div class="screen-frame" role="button" tabindex="0" aria-label="Enlarge D3">
         <div class="screen-frame__wrap">
@@ -623,6 +652,7 @@
         <h3 class="screen-copy__title">Adjust the target from anywhere</h3>
         <p class="screen-copy__body">Same slider from step 4, reachable any time, honest that raising it means selling funds.</p>
         <p class="screen-copy__note">Same control as step 4, reachable later.</p>
+        <div class="screen-copy__insight"><span class="screen-copy__insight-label">In testing</span><p>This started as a settings-only control. Once we saw how often people wanted to raise their reserve right after a big bill, we made the same slider reachable from the account view too.</p></div>
       </div>
       <div class="screen-frame" role="button" tabindex="0" aria-label="Enlarge D4">
         <div class="screen-frame__wrap">
@@ -648,7 +678,7 @@
 
     <div class="section-full">
       <h2 class="section-label">Where it left off</h2>
-      <p class="section-body">The flow got to hand-off: validated through research, designed end to end, ready for engineering. No dev team was ever staffed before my contract ended, so I don't know whether Fidelity built it.</p>
+      <p class="section-body">The flow got to hand-off: validated through research, designed end to end, ready for engineering. No dev team was ever staffed before the engagement ended, so we don't know whether Fidelity built it.</p>
     </div>
 
     <div class="case-footer">
